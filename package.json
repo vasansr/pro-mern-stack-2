@@ -16,5 +16,10 @@
   "homepage": "https://bitbucket.org/vasansr/pro-mern-stack-2#readme",
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-react": "^7.0.0"
   }
 }
