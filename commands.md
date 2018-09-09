@@ -21,3 +21,9 @@ npm uninstall express
 npm install --save express@4
 ```
 
+### Express
+```
+node server.js
+npm start
+```
+
