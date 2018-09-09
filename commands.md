@@ -35,3 +35,10 @@ npx babel --version
 npm install --save-dev @babel/preset-react@7
 npx babel src --presets @babel/react --out-dir public
 ```
+
+### Older Browsers Support
+```
+npx babel src --presets @babel/react --plugins=@babel/plugin-transform-arrow-functions --out-dir public
+npm install --save-dev @babel/preset-env
+npx babel src --out-dir public
+```
