@@ -1,18 +1,18 @@
 {
   "name": "pro-mern-stack-2",
   "version": "1.0.0",
-  "description": "Pro MERN Stack",
+  "description": "Pro MERN Stack (2nd Edition)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/vasansr/pro-mern-stack-2.git"
+    "url": "git+https://github.com/vasansr/pro-mern-stack-2.git"
   },
   "author": "vasan.promern@gmail.com",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/vasansr/pro-mern-stack-2#readme",
+  "homepage": "https://github.com/vasansr/pro-mern-stack-2",
   "dependencies": {
     "express": "^4.16.3"
   }
