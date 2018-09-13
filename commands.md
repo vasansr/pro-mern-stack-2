@@ -14,11 +14,10 @@ nvm alias default 10
 node --version
 npm --version
 npm --install -g npm@6
-npm --version
 npm init
-npm install express@4
+npm install express
 npm uninstall express
-npm install --save express@4
+npm install express@4
 ```
 
 ### Express
@@ -38,7 +37,9 @@ npx babel src --presets @babel/react --out-dir public
 
 ### Older Browsers Support
 ```
+npm install --no-save @babel/plugin-transform-arrow-functions@7
 npx babel src --presets @babel/react --plugins=@babel/plugin-transform-arrow-functions --out-dir public
+npm uninstall @babel/plugin-transform-arrow-functions@7
 npm install --save-dev @babel/preset-env
 npx babel src --out-dir public
 ```
