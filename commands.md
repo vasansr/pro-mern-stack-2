@@ -37,7 +37,9 @@ npx babel src --presets @babel/react --out-dir public
 
 ### Older Browsers Support
 ```
+npm install --no-save @babel/plugin-transform-arrow-functions@7
 npx babel src --presets @babel/react --plugins=@babel/plugin-transform-arrow-functions --out-dir public
+npm uninstall @babel/plugin-transform-arrow-functions@7
 npm install --save-dev @babel/preset-env
 npx babel src --out-dir public
 ```
