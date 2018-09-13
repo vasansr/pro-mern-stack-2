@@ -14,11 +14,10 @@ nvm alias default 10
 node --version
 npm --version
 npm --install -g npm@6
-npm --version
 npm init
-npm install express@4
+npm install express
 npm uninstall express
-npm install --save express@4
+npm install express@4
 ```
 
 ### Express
@@ -26,4 +25,3 @@ npm install --save express@4
 node server.js
 npm start
 ```
-
