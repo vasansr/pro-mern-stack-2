@@ -1,13 +1,12 @@
-const continents = ['Africa','America','Asia','Australia','Europe'];
-const helloContinents = Array.from(continents, c => `Hello ${c}!`);
-const message = helloContinents.join(' ');
+class IssueList extends React.Component {
+  render() {
+    return (
+      <div>This is a placeholder for the issue list.</div>
+    );
+  }
+}
 
-// Create a simple nested React element
-const element = (
-  <div title="Outer div">
-    <h1>{message}</h1>
-  </div>
-);
+const element = <IssueList />;
 
 // Render the element in the contents div
 ReactDOM.render(element, document.getElementById('contents'));
