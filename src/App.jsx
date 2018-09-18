@@ -57,7 +57,7 @@ class IssueTable extends React.Component {
   loadData() {
     setTimeout(() => {
       this.setState({ issues: initialIssues });
-    }, 0);
+    }, 500);
   }
 
   createIssue(issue) {
