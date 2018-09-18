@@ -75,6 +75,7 @@ class IssueAdd extends React.Component {
       this.props.createIssue(sampleIssue);
     }, 2000);
   }
+
   render() {
     return (
       <div>This is a placeholder for a form to add an issue.</div>
