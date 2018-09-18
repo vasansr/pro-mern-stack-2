@@ -86,7 +86,6 @@ class IssueList extends React.Component {
   constructor() {
     super();
     this.state = { issues: [] };
-
     this.createIssue = this.createIssue.bind(this);
   }
 
@@ -114,9 +113,9 @@ class IssueList extends React.Component {
         <h1>Issue Tracker</h1>
         <IssueFilter />
         <hr />
-        <IssueTable issues={this.state.issues}/>
+        <IssueTable issues={this.state.issues} />
         <hr />
-        <IssueAdd createIssue={this.createIssue}/>
+        <IssueAdd createIssue={this.createIssue} />
       </React.Fragment>
     );
   }
