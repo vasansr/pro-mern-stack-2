@@ -1,12 +1,18 @@
-class IssueList extends React.Component {
+class HelloWorld extends React.Component {
   render() {
+    const continents = ['Africa','America','Asia','Australia','Europe'];
+    const helloContinents = Array.from(continents, c => `Hello ${c}!`);
+    const message = helloContinents.join(' ');
+
     return (
-      <div>This is a placeholder for the issue list.</div>
+      <div title="Outer div">
+        <h1>{message}</h1>
+      </div>
     );
   }
 }
 
-const element = <IssueList />;
+const element = <HelloWorld />;
 
 // Render the element in the contents div
 ReactDOM.render(element, document.getElementById('contents'));
