@@ -18,6 +18,7 @@ npm init
 npm install express
 npm uninstall express
 npm install express@4
+npm install nodemon@1
 ```
 
 ### Express
