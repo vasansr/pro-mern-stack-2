@@ -4,7 +4,7 @@
   "description": "Pro MERN Stack (2nd Edition)",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "nodemon -w server server/server.js",
     "compile": "babel src --out-dir public",
     "watch": "babel src --out-dir public --watch --verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,8 @@
   "license": "ISC",
   "homepage": "https://github.com/vasansr/pro-mern-stack-2",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
