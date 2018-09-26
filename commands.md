@@ -44,3 +44,11 @@ npm uninstall @babel/plugin-transform-arrow-functions@7
 npm install --save-dev @babel/preset-env
 npx babel src --out-dir public
 ```
+
+## Chapter 5: Express GraphQL APIs
+
+### About API
+```
+npm install graphql@0 apollo-server-express@2
+curl 'http://localhost:3000/graphql?query=query+\{+about+\}'
+```
