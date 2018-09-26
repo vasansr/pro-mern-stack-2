@@ -4,7 +4,7 @@
   "description": "Pro MERN Stack (2nd Edition)",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w server server/server.js",
+    "start": "nodemon -w server -e js,graphql server/server.js",
     "compile": "babel src --out-dir public",
     "watch": "babel src --out-dir public --watch --verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
