@@ -38,10 +38,7 @@ const GraphQLDate = new GraphQLScalarType({
   name: 'GraphQLDate',
   description: 'A Date() type in GraphQL as a scalar',
   serialize(value) {
-    let result = value.toISOString();
-    // Implement your own behavior here by setting the 'result' variable
-    console.log("Serialize ", result);
-    return result;
+    return value.toISOString();
   },
 });
 
