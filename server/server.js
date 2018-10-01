@@ -55,15 +55,15 @@ function issueList() {
 }
 
 function issueAdd(_, {issue}) {
-  const invalidArgs = {};
+  const errors = [];
   if (issue.title.length < 3) {
-    invalidArgs['title'] = 'Must be at least 3 characters long';
+    errors.push('Field "title" must be at least 3 characters long.')
   }
   if (issue.status == 'Assigned' && !issue.owner) {
-    invalidArgs['owner'] = 'Must have an owner when status is Assigned';
+    errors.push('Field "owner" is required when status is "Assigned"');
   }
-  if (Object.keys(invalidArgs).length > 0) {
-    throw new UserInputError('Invalid input(s)', { invalidArgs });
+  if (errors.length > 0) {
+    throw new UserInputError('Invalid input(s)', { errors });
   }
   issue.created = new Date();
   issue.id = issuesDB.length + 1;
