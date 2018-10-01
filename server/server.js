@@ -63,7 +63,7 @@ function issueAdd(_, {issue}) {
     invalidArgs['owner'] = 'Must have an owner when status is Assigned';
   }
   if (Object.keys(invalidArgs).length > 0) {
-    throw new UserInputError('Invalid input(s)', invalidArgs);
+    throw new UserInputError('Invalid input(s)', { invalidArgs });
   }
   issue.created = new Date();
   issue.id = issuesDB.length + 1;
