@@ -9,7 +9,7 @@ const resolvers = {
     about: () => aboutMessage,
   },
   Mutation: {
-    setAboutMessage: setAboutMessage,
+    setAboutMessage,
   },
 };
 
