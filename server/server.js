@@ -23,7 +23,7 @@ const resolvers = {
     issueList: issueList,
   },
   Mutation: {
-    setAboutMessage: setAboutMessage,
+    setAboutMessage,
   },
 };
 
