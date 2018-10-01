@@ -1,6 +1,6 @@
 const fs = require('fs');
 const express = require('express');
-const { ApolloServer } = require('apollo-server-express');
+const { ApolloServer, UserInputError } = require('apollo-server-express');
 const { GraphQLScalarType } = require('graphql');
 
 let aboutMessage = "Issue Tracker API v1.0";
@@ -55,6 +55,16 @@ function issueList() {
 }
 
 function issueAdd(_, {issue}) {
+  const invalidArgs = {};
+  if (issue.title.length < 3) {
+    invalidArgs['title'] = 'Must be at least 3 characters long';
+  }
+  if (issue.status == 'Assigned' && !issue.owner) {
+    invalidArgs['owner'] = 'Must have an owner when status is Assigned';
+  }
+  if (Object.keys(invalidArgs).length > 0) {
+    throw new UserInputError('Invalid input(s)', invalidArgs);
+  }
   issue.created = new Date();
   issue.id = issuesDB.length + 1;
   if (issue.status == undefined) issue.status = 'New';
