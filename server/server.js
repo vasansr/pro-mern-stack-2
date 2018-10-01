@@ -20,10 +20,10 @@ const issuesDB = [
 const resolvers = {
   Query: {
     about: () => aboutMessage,
-    issueList: issueList,
+    issueList,
   },
   Mutation: {
-    setAboutMessage: setAboutMessage,
+    setAboutMessage,
   },
 };
 
