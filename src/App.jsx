@@ -85,15 +85,12 @@ class IssueList extends React.Component {
   }
 
   async loadData() {
-    const query = `
-      query {
-        issueList {
-          id status owner
-          created effort due
-          title
-        }
+    const query = `query {
+      issueList {
+        id title status owner
+        created effort due
       }
-    `
+    }`;
 
     const response = await fetch('/graphql', {
       method: 'POST',
