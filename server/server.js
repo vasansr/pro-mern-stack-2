@@ -18,6 +18,14 @@ const issuesDB = [
   },
 ];
 
+const GraphQLDate = new GraphQLScalarType({
+  name: 'GraphQLDate',
+  description: 'A Date() type in GraphQL as a scalar',
+  serialize(value) {
+    return value.toISOString();
+  },
+});
+
 const resolvers = {
   Query: {
     about: () => aboutMessage,
@@ -26,6 +34,7 @@ const resolvers = {
   Mutation: {
     setAboutMessage: setAboutMessage,
   },
+  GraphQLDate,
 };
 
 function setAboutMessage(_, {message}) {
@@ -33,14 +42,6 @@ function setAboutMessage(_, {message}) {
   aboutMessage = message;
   return previousMessage;
 }
-
-const GraphQLDate = new GraphQLScalarType({
-  name: 'GraphQLDate',
-  description: 'A Date() type in GraphQL as a scalar',
-  serialize(value) {
-    return value.toISOString();
-  },
-});
 
 function issueList() {
   return issuesDB;
