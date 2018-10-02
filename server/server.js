@@ -37,10 +37,8 @@ const resolvers = {
   GraphQLDate,
 };
 
-function setAboutMessage(_, {message}) {
-  const previousMessage = aboutMessage;
-  aboutMessage = message;
-  return previousMessage;
+function setAboutMessage(_, { message }) {
+  return aboutMessage = message;
 }
 
 function issueList() {
@@ -56,7 +54,7 @@ const app = express();
 
 app.use(express.static('public'));
 
-server.applyMiddleware({app, path: '/graphql'});
+server.applyMiddleware({ app, path: '/graphql' });
 
 app.listen(3000, function () {
   console.log('App started on port 3000');
