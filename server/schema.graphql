@@ -3,5 +3,5 @@ type Query {
 }
 
 type Mutation {
-  setAboutMessage(message: String!): String!
+  setAboutMessage(message: String!): String
 }
