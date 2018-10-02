@@ -8,7 +8,7 @@ const typeDefs = `
     about: String!
   }
   type Mutation {
-    setAboutMessage(message: String!): String!
+    setAboutMessage(message: String!): String
   }
 `;
 
@@ -21,10 +21,8 @@ const resolvers = {
   },
 };
 
-function setAboutMessage(_, {message}) {
-  const previousMessage = aboutMessage;
-  aboutMessage = message;
-  return previousMessage;
+function setAboutMessage(_, { message }) {
+  return aboutMessage = message;
 }
 
 const server = new ApolloServer({
@@ -36,7 +34,7 @@ const app = express();
 
 app.use(express.static('public'));
 
-server.applyMiddleware({app, path: '/graphql'});
+server.applyMiddleware({ app, path: '/graphql' });
 
 app.listen(3000, function () {
   console.log('App started on port 3000');
