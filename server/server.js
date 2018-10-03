@@ -2,6 +2,7 @@ const fs = require('fs');
 const express = require('express');
 const { ApolloServer, UserInputError } = require('apollo-server-express');
 const { GraphQLScalarType } = require('graphql');
+const { Kind } = require('graphql/language');
 
 let aboutMessage = "Issue Tracker API v1.0";
 
@@ -28,7 +29,7 @@ const GraphQLDate = new GraphQLScalarType({
     return new Date(value);
   },
   parseLiteral(ast) {
-    return (ast.kind == 'StringValue') ? new Date(ast.value) : undefined;
+    return (ast.kind == Kind.STRING) ? new Date(ast.value) : undefined;
   },
 });
 
@@ -52,7 +53,7 @@ function issueList() {
   return issuesDB;
 }
 
-function issueAdd(_, {issue}) {
+function issueAdd(_, { issue }) {
   const errors = [];
   if (issue.title.length < 3) {
     errors.push('Field "title" must be at least 3 characters long.')
