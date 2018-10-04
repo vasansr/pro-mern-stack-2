@@ -117,12 +117,10 @@ class IssueList extends React.Component {
       }
     }`;
 
-    const variables = { issue };
-
     const response = await fetch('/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json'},
-      body: JSON.stringify({ query, variables })
+      body: JSON.stringify({ query, variables: { issue } })
     });
     this.loadData();
   }
