@@ -29,7 +29,10 @@ const GraphQLDate = new GraphQLScalarType({
     return new Date(value);
   },
   parseLiteral(ast) {
-    return (ast.kind == Kind.STRING) ? new Date(ast.value) : undefined;
+    if (ast.kind == Kind.STRING) {
+      const value = new Date(ast.value);
+      return isNaN(value) ? undefined : value;
+    }
   },
 });
 
@@ -66,7 +69,6 @@ function issueAdd(_, { issue }) {
   }
   issue.created = new Date();
   issue.id = issuesDB.length + 1;
-  if (issue.status == undefined) issue.status = 'New';
   issuesDB.push(issue);
   return issue;
 }
