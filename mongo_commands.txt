@@ -50,31 +50,28 @@ db.employees.insertMany([
 
 db.employees.findOne({ id: 1 })
 db.employees.find({ age: { $gte: 30 } })
+db.employees.find({ age: { $gte: 30 }, 'name.last': 'Doe'  })
 
-db.employees.createIndex({ id: 1 }, { unique: true })
 db.employees.createIndex({ age: 1 })
+db.employees.createIndex({ id: 1 }, { unique: true })
 
-db.employees.find({}, { _id: 0, 'name.first': 1, age: 1 })
 db.employees.find({}, { 'name.first': 1, age: 1 })
+db.employees.find({}, { _id: 0, 'name.first': 1, age: 1 })
 
 db.employees.updateOne({ id: 2 }, { $set: {age: 23 } })
-db.employees.find({}, { 'name.first': 1, age: 1 })
 
-db.employees.updateMany({}, { $set: {organization: 'MyCompany' } })
-
+db.employees.updateMany({}, { $set: { organization: 'MyCompany' } })
 
 db.employees.deleteOne({ id: 4 })
+db.employees.count()
 
-db.employees.aggregate([
-  { $group: { _id: null, count: { $sum: 1 } } }
-])
 db.employees.aggregate([
   { $group: { _id: null, total_age: { $sum: '$age' } } }
 ])
-db.employees.updateOne(
-  { id: 4 },
-  { $set: { organization: 'OtherCompany' } }
-)
+db.employees.aggregate([
+  { $group: { _id: null, count: { $sum: 1 } } }
+])
+
 db.employees.insertOne({
   id: 4,
   name: { first: 'Bob', last: 'B' },
@@ -83,5 +80,9 @@ db.employees.insertOne({
 })
 
 db.employees.aggregate([
-  { $group: { _id: '$organization', total_age: { $avg: '$age' } } }
+  { $group: { _id: '$organization', total_age: { $sum: '$age' } } }
+])
+
+db.employees.aggregate([
+  { $group: { _id: '$organization', average_age: { $avg: '$age' } } }
 ])
