@@ -61,3 +61,8 @@ npm install mongodb@3
 mongo playground --eval 'db.employees.remove({})'
 node scripts/trymongo.js
 ```
+
+### Schema Initialization
+```
+mongo scripts/init.mongo.js
+```
