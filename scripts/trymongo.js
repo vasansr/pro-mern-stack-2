@@ -7,29 +7,34 @@ function testWithCallbacks(callback) {
   console.log('\n--- testWithCallbacks ---');
   const client = new MongoClient(url, { useNewUrlParser: true });
   client.connect(function(err, client) {
+    if (err) {
+      callback(err);
+      return;
+    }
     console.log('Connected to MongoDB');
 
     const db = client.db(dbName);
-    collection = db.collection('employees');
+    const collection = db.collection('employees');
 
     const employee = { id: 1, name: 'A. Callback', age: 23 };
     collection.insertOne(employee, function(err, result) {
       if (err) {
-        console.log(err);
         client.close();
-        callback();
-      } else {
-        console.log('Result of insert:\n', result.insertedId);
-        collection.find({id: 1}).toArray(function(err, docs) {
-          if (err) {
-            console.log(err);
-          } else {
-            console.log('Result of find:\n', docs);
-          }
-          client.close();
-          callback();
-        });
+        callback(err);
+        return;
       }
+      console.log('Result of insert:\n', result.insertedId);
+      collection.find({ _id: result.insertedId})
+        .toArray(function(err, docs) {
+        if (err) {
+          client.close();
+          callback(err);
+          return;
+        }
+        console.log('Result of find:\n', docs);
+        client.close();
+        callback(err);
+      });
     });
   });
 }
@@ -41,13 +46,14 @@ async function testWithAsync() {
     await client.connect();
     console.log('Connected to MongoDB');
     const db = client.db(dbName);
-    collection = db.collection('employees');
+    const collection = db.collection('employees');
 
     const employee = { id: 2, name: 'B. Async', age: 16 };
     const result = await collection.insertOne(employee);
     console.log('Result of insert:\n', result.insertedId);
 
-    const docs = await collection.find({ id: 2 }).toArray();
+    const docs = await collection.find({ _id: result.insertedId })
+      .toArray();
     console.log('Result of find:\n', docs);
   } catch(err) {
     console.log(err);
@@ -56,4 +62,9 @@ async function testWithAsync() {
   }
 }
 
-testWithCallbacks(testWithAsync);
+testWithCallbacks(function(err) {
+  if (err) {
+    console.log(err);
+  }
+  testWithAsync();
+});
