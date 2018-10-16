@@ -5,8 +5,13 @@ const { GraphQLScalarType } = require('graphql');
 const { Kind } = require('graphql/language');
 const { MongoClient } = require('mongodb');
 
-const url = 'mongodb://localhost';
-const dbName = 'issuetracker';
+const { protocol, host, user, password, dbName, options }
+  = require('../mongodb.config.js');
+
+const userpassword = user ? `${user}:${password}@` : '';
+const query = options ? `?${options}` : '';
+const url = `${protocol}://${userpassword}${host}/${dbName}${query}`;
+
 let db;
 
 let aboutMessage = "Issue Tracker API v1.0";
@@ -83,8 +88,8 @@ function issueAdd(_, { issue }) {
 async function connectToDb() {
   const client = new MongoClient(url, { useNewUrlParser: true });
   await client.connect();
-  console.log('Connected to MongoDB');
-  db = client.db(dbName);
+  console.log('Connected to MongoDB at', url);
+  db = client.db();
 }
 
 const server = new ApolloServer({
