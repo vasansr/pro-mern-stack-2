@@ -1,7 +1,13 @@
 const { MongoClient } = require('mongodb');
 
-const url = 'mongodb://localhost';
-const dbName = 'playground';
+const { protocol, host, user, password, db, options }
+  = require('../mongodb.config.js');
+
+const userpassword = user ? `${user}:${password}@` : '';
+const query = options ? `?${options}` : '';
+const url = `${protocol}://${userpassword}${host}/${db}${query}`;
+
+console.log('URL', url);
 
 function testWithCallbacks(callback) {
   console.log('\n--- testWithCallbacks ---');
@@ -13,7 +19,7 @@ function testWithCallbacks(callback) {
     }
     console.log('Connected to MongoDB');
 
-    const db = client.db(dbName);
+    const db = client.db();
     const collection = db.collection('employees');
 
     const employee = { id: 1, name: 'A. Callback', age: 23 };
@@ -45,7 +51,7 @@ async function testWithAsync() {
   try {
     await client.connect();
     console.log('Connected to MongoDB');
-    const db = client.db(dbName);
+    const db = client.db();
     const collection = db.collection('employees');
 
     const employee = { id: 2, name: 'B. Async', age: 16 };
