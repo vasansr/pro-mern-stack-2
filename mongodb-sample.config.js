@@ -1,13 +1,13 @@
 const localConfig = {
   protocol: 'mongodb',
   host: 'localhost',
-  db: 'issuetracker',
+  dbName: 'issuetracker',
 }
 
 const atlasConfig = {
   protocol: 'mongodb+srv',
   host: 'cluster0-abcd.mongodb.net',  // change this to your host
-  db: 'issuetracker',
+  dbName: 'issuetracker',
   query: 'retryWrites=true',
   user: 'atlasUser',                  // change this to your user
   password: 'atlasPassword',          // change this to your password
@@ -16,7 +16,7 @@ const atlasConfig = {
 const mlabConfig = {
   protocol: 'mongodb',
   host: 'ds111111.mlab.com:33533',    // change this to your host
-  db: 'issuetracker',
+  dbName: 'issuetracker',
   user: 'atlasUser',                  // change this to your user
   password: 'atlasPassword',          // change this to your password
 }

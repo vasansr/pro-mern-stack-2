@@ -1,13 +1,11 @@
 const { MongoClient } = require('mongodb');
 
-const { protocol, host, user, password, db, options }
+const { protocol, host, user, password, dbName, options }
   = require('../mongodb.config.js');
 
 const userpassword = user ? `${user}:${password}@` : '';
 const query = options ? `?${options}` : '';
-const url = `${protocol}://${userpassword}${host}/${db}${query}`;
-
-console.log('URL', url);
+const url = `${protocol}://${userpassword}${host}/${dbName}${query}`;
 
 function testWithCallbacks(callback) {
   console.log('\n--- testWithCallbacks ---');
