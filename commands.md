@@ -58,7 +58,7 @@ curl 'http://localhost:3000/graphql?query=query+\{+about+\}'
 ### MongoDB Node.js Driver
 ```
 npm install mongodb@3
-mongo playground --eval 'db.employees.remove({})'
+mongo issuetracker --eval 'db.employees.remove({})'
 node scripts/trymongo.js
 ```
 
