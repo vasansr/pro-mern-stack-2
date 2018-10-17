@@ -1,7 +1,7 @@
 show databases
 db
 show collections
-use playground
+use issuetracker
 show collections
 
 db.employees.insertOne({ name: { first: 'John', last: 'Doe' }, age: 44 })
