@@ -64,5 +64,5 @@ node scripts/trymongo.js
 
 ### Schema Initialization
 ```
-mongo scripts/init.mongo.js
+mongo issuetracker scripts/init.mongo.js
 ```
