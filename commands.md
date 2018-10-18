@@ -50,7 +50,7 @@ npx babel src --out-dir public
 ### About API
 ```
 npm install graphql@0 apollo-server-express@2
-curl 'http://localhost:3000/graphql?query=query+\{+about+\}'
+curl "http://localhost:3000/graphql?query=query+\{+about+\}"
 ```
 
 ## Chapter 6: MongoDB
@@ -58,7 +58,7 @@ curl 'http://localhost:3000/graphql?query=query+\{+about+\}'
 ### MongoDB Node.js Driver
 ```
 npm install mongodb@3
-mongo issuetracker --eval 'db.employees.remove({})'
+mongo issuetracker --eval "db.employees.remove({})"
 node scripts/trymongo.js
 ```
 
