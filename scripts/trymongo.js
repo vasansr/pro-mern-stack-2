@@ -1,11 +1,12 @@
 const { MongoClient } = require('mongodb');
 
-const { protocol, host, user, password, dbName, options }
-  = require('../mongodb.config.js');
+const url = 'mongodb://localhost/issuetracker';
 
-const userpassword = user ? `${user}:${password}@` : '';
-const query = options ? `?${options}` : '';
-const url = `${protocol}://${userpassword}${host}/${dbName}${query}`;
+// Atlas URL  - replace UUU with user, PPP with password, XXX with hostname
+// const url = 'mongodb+srv://UUU:PPP@cluster0-XXX.mongodb.net/issuetracker?retryWrites=true';
+
+// mLab URL - replace UUU with user, PPP with password, XXX with hostname
+// const url = 'mongodb://UUU:PPP@XXX.mlab.com:33533/issuetracker';
 
 function testWithCallbacks(callback) {
   console.log('\n--- testWithCallbacks ---');
