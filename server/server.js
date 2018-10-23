@@ -1,4 +1,3 @@
-require('dotenv').config();
 const fs = require('fs');
 const express = require('express');
 const { ApolloServer, UserInputError } = require('apollo-server-express');
@@ -6,7 +5,13 @@ const { GraphQLScalarType } = require('graphql');
 const { Kind } = require('graphql/language');
 const { MongoClient } = require('mongodb');
 
-const url = process.env.DB_URL || 'mongodb://localhost/issuetracker';
+const url = 'mongodb://localhost/issuetracker';
+
+// Atlas URL  - replace UUU with user, PPP with password, XXX with hostname
+// const url = 'mongodb+srv://UUU:PPP@cluster0-XXX.mongodb.net/issuetracker?retryWrites=true';
+
+// mLab URL - replace UUU with user, PPP with password, XXX with hostname
+// const url = 'mongodb://UUU:PPP@XXX.mlab.com:33533/issuetracker';
 
 let db;
 
