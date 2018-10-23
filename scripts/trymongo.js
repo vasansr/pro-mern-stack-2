@@ -1,11 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const { protocol, host, user, password, dbName, options }
-  = require('../mongodb.config.js');
-
-const userpassword = user ? `${user}:${password}@` : '';
-const query = options ? `?${options}` : '';
-const url = `${protocol}://${userpassword}${host}/${dbName}${query}`;
+const url = process.env.DB_URL || 'mongodb://localhost/issuetracker';
 
 function testWithCallbacks(callback) {
   console.log('\n--- testWithCallbacks ---');

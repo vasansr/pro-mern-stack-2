@@ -1,3 +1,4 @@
+require('dotenv').config();
 const fs = require('fs');
 const express = require('express');
 const { ApolloServer, UserInputError } = require('apollo-server-express');
@@ -5,12 +6,7 @@ const { GraphQLScalarType } = require('graphql');
 const { Kind } = require('graphql/language');
 const { MongoClient } = require('mongodb');
 
-const { protocol, host, user, password, dbName, options }
-  = require('../mongodb.config.js');
-
-const userpassword = user ? `${user}:${password}@` : '';
-const query = options ? `?${options}` : '';
-const url = `${protocol}://${userpassword}${host}/${dbName}${query}`;
+const url = process.env.DB_URL || 'mongodb://localhost/issuetracker';
 
 let db;
 
