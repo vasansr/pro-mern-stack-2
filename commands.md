@@ -84,3 +84,12 @@ npm install
 cd ..
 rm -rf node_modules
 ```
+
+### Environment
+```
+cd api
+npm install dotenv@6
+cd ..
+cd ui
+npm install dotenv@6
+```

@@ -1,3 +1,4 @@
 node_modules
 package-lock.json
 ui/public/App.js
+.env
