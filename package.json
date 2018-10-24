@@ -4,10 +4,10 @@
   "description": "Pro MERN Stack (2nd Edition)",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w server -e js,graphql server/server.js",
-    "compile": "babel src --out-dir public",
-    "watch": "babel src --out-dir public --watch --verbose",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-api": "cd api; npm start",
+    "start-ui": "cd ui; npm start",
+    "compile-ui": "cd ui; npm run compile",
+    "watch-ui": "cd ui; npm run watch"
   },
   "repository": {
     "type": "git",
@@ -15,18 +15,5 @@
   },
   "author": "vasan.promern@gmail.com",
   "license": "ISC",
-  "homepage": "https://github.com/vasansr/pro-mern-stack-2",
-  "dependencies": {
-    "apollo-server-express": "^2.1.0",
-    "express": "^4.16.3",
-    "graphql": "^0.13.2",
-    "mongodb": "^3.1.6",
-    "nodemon": "^1.18.4"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0"
-  }
+  "homepage": "https://github.com/vasansr/pro-mern-stack-2"
 }

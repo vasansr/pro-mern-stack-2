@@ -66,3 +66,21 @@ node scripts/trymongo.js
 ```
 mongo issuetracker scripts/init.mongo.js
 ```
+
+## Chapter 7: Webpack and ESLint
+
+### UI Server
+```
+mv server api
+mv scripts api
+mkdir ui
+mv public ui
+mv src ui
+cd api
+npm install
+cd ..
+cd ui
+npm install
+cd ..
+rm -rf node_modules
+```
