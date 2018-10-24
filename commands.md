@@ -66,8 +66,3 @@ node scripts/trymongo.js
 ```
 mongo issuetracker scripts/init.mongo.js
 ```
-
-### Reading from MongoDB
-```
-npm install dotenv@6
-```
