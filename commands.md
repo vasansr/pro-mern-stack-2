@@ -108,3 +108,11 @@ npx webpack --version
 npx webpack public/App.js --output public/app.bundle.js
 npx webpack public/App.js --output public/app.bundle.js --mode development
 ```
+
+### Transform and Bundle
+```
+cd ui
+npm install --save-dev babel-loader@8
+npx webpack
+npx webpack --watch
+```
