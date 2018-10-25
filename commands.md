@@ -93,3 +93,9 @@ cd ..
 cd ui
 npm install dotenv@6
 ```
+
+### Proxy Based Architecture
+```
+cd ui
+npm install http-proxy-middleware@0
+```
