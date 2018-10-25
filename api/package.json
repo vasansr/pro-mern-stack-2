@@ -4,7 +4,7 @@
   "description": "Pro MERN Stack (2nd Edition) API",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e js,graphql server.js",
+    "start": "nodemon -e js,graphql -w . -w .env server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
