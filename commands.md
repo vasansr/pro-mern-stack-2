@@ -99,3 +99,12 @@ npm install dotenv@6
 cd ui
 npm install http-proxy-middleware@0
 ```
+
+### Introduction to Webpack
+```
+cd ui
+npm install webpack@4 webpack-cli@3
+npx webpack --version
+npx webpack public/App.js --output public/app.bundle.js
+npx webpack public/App.js --output public/app.bundle.js --mode development
+```
