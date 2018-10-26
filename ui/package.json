@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon -w uiserver.js -w .env uiserver.js",
-    "compile": "webpack",
+    "compile": "webpack --mode production",
     "watch": "webpack --watch"
   },
   "repository": {
