@@ -116,3 +116,11 @@ npm install --save-dev babel-loader@8
 npx webpack
 npx webpack --watch
 ```
+
+### Libraries Bundle
+```
+cd ui
+npm install --save-dev react@16 react-dom@16
+npm install --save-dev whatwg-fetch@3
+npm install --save-dev babel-polyfill@6
+```
