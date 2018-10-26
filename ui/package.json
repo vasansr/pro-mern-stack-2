@@ -4,8 +4,16 @@
   "description": "Pro MERN Stack (2nd Edition) - UI",
   "main": "index.js",
   "scripts": {
+    "#": "Starts the server. In development mode, enables HMR unless",
+    "#": "ENABLE_HMR is set to false in the environment.",
     "start": "nodemon -w uiserver.js -w .env uiserver.js",
+
+    "#": "Compiles the UI to generate the JS bundles. To be used for",
+    "#": "production, along with the start script above.",
     "compile": "webpack --mode production",
+
+    "#": "Compiles and watches for changes to UI files, recompiles on",
+    "#": "changes. Use with the start script above for development",
     "watch": "webpack --watch"
   },
   "repository": {
@@ -32,6 +40,8 @@
     "react-dom": "^16.6.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3",
     "whatwg-fetch": "^3.0.0"
   }
 }

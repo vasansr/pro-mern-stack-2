@@ -124,3 +124,10 @@ npm install --save-dev react@16 react-dom@16
 npm install --save-dev whatwg-fetch@3
 npm install --save-dev babel-polyfill@6
 ```
+
+### Hot Module Replacement
+```
+cd ui
+npm install --save-dev webpack-dev-middleware@3
+npm install --save-dev webpack-hot-middleware@2
+```
