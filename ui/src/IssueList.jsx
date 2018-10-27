@@ -56,3 +56,7 @@ export default class IssueList extends React.Component {
     );
   }
 }
+
+if (module.hot) {
+  module.hot.accept();
+}
