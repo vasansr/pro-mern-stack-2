@@ -1,5 +1,11 @@
+/* eslint "react/react-in-jsx-scope": "off" */
+/* globals React ReactDOM PropTypes */
+/* eslint "react/jsx-no-undef": "off" */
+/* eslint "react/no-multi-comp": "off" */
+
 import graphQLFetch from './graphQLFetch.js';
 
+// eslint-disable-next-line react/prefer-stateless-function
 class IssueFilter extends React.Component {
   render() {
     return (
@@ -8,8 +14,7 @@ class IssueFilter extends React.Component {
   }
 }
 
-function IssueRow(props) {
-  const issue = props.issue;
+function IssueRow({ issue }) {
   return (
     <tr>
       <td>{issue.id}</td>
@@ -23,10 +28,10 @@ function IssueRow(props) {
   );
 }
 
-function IssueTable(props) {
-  const issueRows = props.issues.map(issue =>
+function IssueTable({ issues }) {
+  const issueRows = issues.map(issue => (
     <IssueRow key={issue.id} issue={issue} />
-  );
+  ));
 
   return (
     <table className="bordered-table">
@@ -58,11 +63,13 @@ class IssueAdd extends React.Component {
     e.preventDefault();
     const form = document.forms.issueAdd;
     const issue = {
-      owner: form.owner.value, title: form.title.value,
-      due: new Date(new Date().getTime() + 1000*60*60*24*10),
-    }
-    this.props.createIssue(issue);
-    form.owner.value = ""; form.title.value = "";
+      owner: form.owner.value,
+      title: form.title.value,
+      due: new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 10),
+    };
+    const { createIssue } = this.props;
+    createIssue(issue);
+    form.owner.value = ''; form.title.value = '';
   }
 
   render() {
@@ -70,11 +77,15 @@ class IssueAdd extends React.Component {
       <form name="issueAdd" onSubmit={this.handleSubmit}>
         <input type="text" name="owner" placeholder="Owner" />
         <input type="text" name="title" placeholder="Title" />
-        <button>Add</button>
+        <button type="submit">Add</button>
       </form>
     );
   }
 }
+
+IssueAdd.propTypes = {
+  createIssue: PropTypes.func.isRequired,
+};
 
 class IssueList extends React.Component {
   constructor() {
@@ -115,12 +126,13 @@ class IssueList extends React.Component {
   }
 
   render() {
+    const { issues } = this.state;
     return (
       <React.Fragment>
         <h1>Issue Tracker</h1>
         <IssueFilter />
         <hr />
-        <IssueTable issues={this.state.issues} />
+        <IssueTable issues={issues} />
         <hr />
         <IssueAdd createIssue={this.createIssue} />
       </React.Fragment>

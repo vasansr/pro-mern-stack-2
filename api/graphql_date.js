@@ -9,13 +9,14 @@ const GraphQLDate = new GraphQLScalarType({
   },
   parseValue(value) {
     const dateValue = new Date(value);
-    return isNaN(dateValue) ? undefined : dateValue;
+    return Number.isNaN(dateValue.getTime()) ? undefined : dateValue;
   },
   parseLiteral(ast) {
-    if (ast.kind == Kind.STRING) {
+    if (ast.kind === Kind.STRING) {
       const value = new Date(ast.value);
-      return isNaN(value) ? undefined : value;
+      return Number.isNaN(value.getTime()) ? undefined : value;
     }
+    return undefined;
   },
 });
 
