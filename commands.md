@@ -107,3 +107,13 @@ npm install --save-dev eslint@5 eslint-plugin-import@2
 npm install --save-dev eslint-config-airbnb-base@13
 npx eslint .
 ```
+
+### ESLint for Front-end
+```
+cd ui
+npm install --save-dev eslint@5 eslint-plugin-import@2
+npm install --save-dev eslint-plugin-jsx-a11y@6 eslint-plugin-react@7
+npm install --save-dev eslint-config-airbnb@17
+npx eslint . --ignore-pattern public
+npx eslint . --ext js,jsx --ignore-pattern public
+```
