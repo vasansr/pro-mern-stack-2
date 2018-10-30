@@ -100,6 +100,26 @@ cd ui
 npm install http-proxy-middleware@0
 ```
 
+### ESLint for Back-end
+```
+cd api
+npm install --save-dev eslint@5 eslint-plugin-import@2
+npm install --save-dev eslint-config-airbnb-base@13
+npx eslint .
+```
+
+### ESLint for Front-end
+```
+cd ui
+npm install --save-dev eslint@5 eslint-plugin-import@2
+npm install --save-dev eslint-plugin-jsx-a11y@6 eslint-plugin-react@7
+npm install --save-dev eslint-config-airbnb@17
+npx eslint . --ignore-pattern public
+npx eslint . --ext js,jsx --ignore-pattern public
+```
+
+## Modularization and Webpack
+
 ### Front-end Modules and Webpack
 ```
 cd ui
@@ -120,7 +140,8 @@ npx webpack --watch
 ### Libraries Bundle
 ```
 cd ui
-npm install --save-dev react@16 react-dom@16
-npm install --save-dev whatwg-fetch@3
-npm install --save-dev babel-polyfill@6
+npm install react@16 react-dom@16
+npm install prop-types@15
+npm install whatwg-fetch@3
+npm install babel-polyfill@6
 ```

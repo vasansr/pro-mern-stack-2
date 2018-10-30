@@ -44,12 +44,13 @@ export default class IssueList extends React.Component {
   }
 
   render() {
+    const { issues } = this.state;
     return (
       <React.Fragment>
         <h1>Issue Tracker</h1>
         <IssueFilter />
         <hr />
-        <IssueTable issues={this.state.issues} />
+        <IssueTable issues={issues} />
         <hr />
         <IssueAdd createIssue={this.createIssue} />
       </React.Fragment>
