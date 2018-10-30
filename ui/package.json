@@ -8,6 +8,9 @@
     "#": "ENABLE_HMR is set to false in the environment.",
     "start": "nodemon -w uiserver.js -w .env uiserver.js",
 
+    "#": "Runs ESLint on all relevant files",
+    "lint": "eslint . --ext js,jsx --ignore-pattern public",
+
     "#": "Compiles the UI to generate the JS bundles. To be used for",
     "#": "production, along with the start script above.",
     "compile": "webpack --mode production",
@@ -24,10 +27,17 @@
   "license": "ISC",
   "homepage": "https://github.com/vasansr/pro-mern-stack-2",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "dotenv": "^6.1.0",
     "express": "^4.16.3",
     "http-proxy-middleware": "^0.19.0",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -35,13 +45,12 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "babel-polyfill": "^6.26.0",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "webpack": "^4.23.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-middleware": "^3.4.0",
-    "webpack-hot-middleware": "^2.24.3",
-    "whatwg-fetch": "^3.0.0"
+    "webpack-cli": "^3.1.2"
   }
 }
