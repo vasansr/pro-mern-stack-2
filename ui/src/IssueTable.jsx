@@ -1,5 +1,6 @@
-function IssueRow(props) {
-  const issue = props.issue;
+/* globals React */
+
+function IssueRow({ issue }) {
   return (
     <tr>
       <td>{issue.id}</td>
@@ -13,10 +14,10 @@ function IssueRow(props) {
   );
 }
 
-export default function IssueTable(props) {
-  const issueRows = props.issues.map(issue =>
+export default function IssueTable({ issues }) {
+  const issueRows = issues.map(issue => (
     <IssueRow key={issue.id} issue={issue} />
-  );
+  ));
 
   return (
     <table className="bordered-table">

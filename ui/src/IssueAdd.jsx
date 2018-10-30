@@ -1,3 +1,5 @@
+/* globals React */
+
 export default class IssueAdd extends React.Component {
   constructor() {
     super();
@@ -8,11 +10,13 @@ export default class IssueAdd extends React.Component {
     e.preventDefault();
     const form = document.forms.issueAdd;
     const issue = {
-      owner: form.owner.value, title: form.title.value,
-      due: new Date(new Date().getTime() + 1000*60*60*24*10),
-    }
-    this.props.createIssue(issue);
-    form.owner.value = ""; form.title.value = "";
+      owner: form.owner.value,
+      title: form.title.value,
+      due: new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 10),
+    };
+    const { createIssue } = this.props;
+    createIssue(issue);
+    form.owner.value = ''; form.title.value = '';
   }
 
   render() {
@@ -20,7 +24,7 @@ export default class IssueAdd extends React.Component {
       <form name="issueAdd" onSubmit={this.handleSubmit}>
         <input type="text" name="owner" placeholder="Owner" />
         <input type="text" name="title" placeholder="Title" />
-        <button>Add</button>
+        <button type="submit">Add</button>
       </form>
     );
   }
