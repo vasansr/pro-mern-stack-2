@@ -67,7 +67,7 @@ node scripts/trymongo.js
 mongo issuetracker scripts/init.mongo.js
 ```
 
-## Chapter 7: Webpack and ESLint
+## Chapter 7: Architecture and ESLint
 
 ### UI Server
 ```
