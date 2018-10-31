@@ -6,13 +6,10 @@
   "scripts": {
     "#start": "UI server. HMR is enabled in dev mode.",
     "start": "nodemon -w uiserver.js -w .env uiserver.js",
-
     "#lint": "Runs ESLint on all relevant files",
     "lint": "eslint . --ext js,jsx --ignore-pattern public",
-
     "#compile": "Generates JS bundles for production. Use with start.",
     "compile": "webpack --mode production",
-
     "#watch": "Compile, and recompile on any changes.",
     "watch": "webpack --watch"
   },
