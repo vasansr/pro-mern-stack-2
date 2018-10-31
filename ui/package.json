@@ -4,19 +4,16 @@
   "description": "Pro MERN Stack (2nd Edition) - UI",
   "main": "index.js",
   "scripts": {
-    "#": "Starts the server. In development mode, enables HMR unless",
-    "#": "ENABLE_HMR is set to false in the environment.",
+    "#start": "UI server. HMR is enabled in dev mode.",
     "start": "nodemon -w uiserver.js -w .env uiserver.js",
 
-    "#": "Runs ESLint on all relevant files",
+    "#lint": "Runs ESLint on all relevant files",
     "lint": "eslint . --ext js,jsx --ignore-pattern public",
 
-    "#": "Compiles the UI to generate the JS bundles. To be used for",
-    "#": "production, along with the start script above.",
+    "#compile": "Generates JS bundles for production. Use with start.",
     "compile": "webpack --mode production",
 
-    "#": "Compiles and watches for changes to UI files, recompiles on",
-    "#": "changes. Use with the start script above for development",
+    "#watch": "Compile, and recompile on any changes.",
     "watch": "webpack --watch"
   },
   "repository": {
