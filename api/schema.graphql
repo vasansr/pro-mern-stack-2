@@ -2,11 +2,9 @@ scalar GraphQLDate
 
 enum StatusType {
   New
-  Open
   Assigned
   Fixed
   Closed
-  Invalid
 }
 
 type Issue {
