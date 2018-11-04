@@ -1,6 +1,6 @@
 const issues = [
   {
-    id: 1, status: 'Open', owner: 'Ravan', effort: 5,
+    id: 1, status: 'New', owner: 'Ravan', effort: 5,
     created: new Date('2018-08-15'), due: undefined,
     title: 'Error in console when clicking Add',
   },
