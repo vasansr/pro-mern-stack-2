@@ -17,7 +17,7 @@ db.issues.remove({});
 const issuesDB = [
   {
     id: 1,
-    status: 'Open',
+    status: 'New',
     owner: 'Ravan',
     effort: 5,
     created: new Date('2019-01-15'),
