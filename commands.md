@@ -152,3 +152,11 @@ cd ui
 npm install --save-dev webpack-dev-middleware@3
 npm install --save-dev webpack-hot-middleware@2
 ```
+
+## Chapter 9: React Router
+
+### Simple Routing
+```
+cd ui
+npm install react-router-dom@4
+```
