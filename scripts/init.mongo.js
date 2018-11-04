@@ -13,7 +13,7 @@ db.issues.remove({});
 
 const issuesDB = [
   {
-    id: 1, status: 'Open', owner: 'Ravan', effort: 5,
+    id: 1, status: 'New', owner: 'Ravan', effort: 5,
     created: new Date('2019-01-15'), due: undefined,
     title: 'Error in console when clicking Add',
   },
