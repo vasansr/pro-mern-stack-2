@@ -160,3 +160,9 @@ npm install --save-dev webpack-hot-middleware@2
 cd ui
 npm install react-router-dom@4
 ```
+
+### Query Strings
+```
+cd ui
+npm install url-search-params@1
+```
