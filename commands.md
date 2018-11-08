@@ -145,3 +145,10 @@ npm install prop-types@15
 npm install whatwg-fetch@3
 npm install babel-polyfill@6
 ```
+
+### Hot Module Replacement
+```
+cd ui
+npm install --save-dev webpack-dev-middleware@3
+npm install --save-dev webpack-hot-middleware@2
+```
