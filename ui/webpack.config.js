@@ -22,4 +22,5 @@ module.exports = {
       chunks: 'all',
     },
   },
+  devtool: 'source-map',
 };
