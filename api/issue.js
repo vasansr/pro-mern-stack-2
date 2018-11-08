@@ -25,7 +25,7 @@ async function add(_, { issue }) {
   newIssue.created = new Date();
   newIssue.id = await getNextSequence('issues');
 
-  const result = await db.collection('issues').insertOne(issue);
+  const result = await db.collection('issues').insertOne(newIssue);
   const savedIssue = await db.collection('issues')
     .findOne({ _id: result.insertedId });
   return savedIssue;
