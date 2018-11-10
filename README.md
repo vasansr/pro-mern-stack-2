@@ -51,9 +51,9 @@ This repository is incomplete.
    * UI Server: [Full Source](../../tree/07.01-ui-server) | [Diffs](../../compare/06.06-writing-to-mongodb...07.01-ui-server)
    * Multiple Environments: [Full Source](../../tree/07.02-multiple-environments) | [Diffs](../../compare/07.01-ui-server...07.02-multiple-environments)
    * Proxy Based Architecture: [Full Source](../../tree/07.03-proxy-based-architecture) | [Diffs](../../compare/07.02-multiple-environments...07.03-proxy-based-architecture)
-   * ESLint: [Full Source](../../tree/07.04-ESLint) | [Diffs](../../compare/07.03-proxy-based-architecture...07.04-ESLint)
-   * ESLint For Front End: [Full Source](../../tree/07.05-ESLint-for-front-end) | [Diffs](../../compare/07.04-ESLint...07.05-ESLint-for-front-end)
-   * React Proptypes: [Full Source](../../tree/07.06-react-proptypes) | [Diffs](../../compare/07.05-ESLint-for-front-end...07.06-react-proptypes)
+   * ESLint: [Full Source](../../tree/07.04-eslint) | [Diffs](../../compare/07.03-proxy-based-architecture...07.04-eslint)
+   * ESLint For Front End: [Full Source](../../tree/07.05-eslint-for-front-end) | [Diffs](../../compare/07.04-eslint...07.05-eslint-for-front-end)
+   * React Proptypes: [Full Source](../../tree/07.06-react-proptypes) | [Diffs](../../compare/07.05-eslint-for-front-end...07.06-react-proptypes)
 
 ### Chapter 8: Modularization and Webpack
    * Backend Modules: [Full Source](../../tree/08.01-backend-modules) | [Diffs](../../compare/07.06-react-proptypes...08.01-backend-modules)
