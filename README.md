@@ -40,15 +40,15 @@ This repository is incomplete.
    * Displaying Errors: [Full Source](../../tree/05.10-displaying-errors) | [Diffs](../../compare/05.09-input-validations...05.10-displaying-errors)
 
 ### Chapter 6: MongoDB
-   * MongoDB Basics: [Full Source](../../tree/06.01-MongoDB-basics) | [Diffs](../../compare/05.10-displaying-errors...06.01-MongoDB-basics)
-   * MongoDB Crud Operations: [Full Source](../../tree/06.02-MongoDB-crud-operations) | [Diffs](../../compare/06.01-MongoDB-basics...06.02-MongoDB-crud-operations)
-   * MongoDB Node.js Driver: [Full Source](../../tree/06.03-MongoDB-node.js-driver) | [Diffs](../../compare/06.02-MongoDB-crud-operations...06.03-MongoDB-node.js-driver)
-   * Schema Initialization: [Full Source](../../tree/06.04-schema-initialization) | [Diffs](../../compare/06.03-MongoDB-node.js-driver...06.04-schema-initialization)
-   * Reading From MongoDB: [Full Source](../../tree/06.05-reading-from-MongoDB) | [Diffs](../../compare/06.04-schema-initialization...06.05-reading-from-MongoDB)
-   * Writing To MongoDB: [Full Source](../../tree/06.06-writing-to-MongoDB) | [Diffs](../../compare/06.05-reading-from-MongoDB...06.06-writing-to-MongoDB)
+   * MongoDB Basics: [Full Source](../../tree/06.01-mongodb-basics) | [Diffs](../../compare/05.10-displaying-errors...06.01-mongodb-basics)
+   * MongoDB Crud Operations: [Full Source](../../tree/06.02-mongodb-crud-operations) | [Diffs](../../compare/06.01-mongodb-basics...06.02-mongodb-crud-operations)
+   * MongoDB Node.js Driver: [Full Source](../../tree/06.03-mongodb-node.js-driver) | [Diffs](../../compare/06.02-mongodb-crud-operations...06.03-mongodb-node.js-driver)
+   * Schema Initialization: [Full Source](../../tree/06.04-schema-initialization) | [Diffs](../../compare/06.03-mongodb-node.js-driver...06.04-schema-initialization)
+   * Reading From MongoDB: [Full Source](../../tree/06.05-reading-from-mongodb) | [Diffs](../../compare/06.04-schema-initialization...06.05-reading-from-mongodb)
+   * Writing To MongoDB: [Full Source](../../tree/06.06-writing-to-mongodb) | [Diffs](../../compare/06.05-reading-from-mongodb...06.06-writing-to-mongodb)
 
 ### Chapter 7: Architecture and ESLint
-   * UI Server: [Full Source](../../tree/07.01-ui-server) | [Diffs](../../compare/06.06-writing-to-MongoDB...07.01-ui-server)
+   * UI Server: [Full Source](../../tree/07.01-ui-server) | [Diffs](../../compare/06.06-writing-to-mongodb...07.01-ui-server)
    * Multiple Environments: [Full Source](../../tree/07.02-multiple-environments) | [Diffs](../../compare/07.01-ui-server...07.02-multiple-environments)
    * Proxy Based Architecture: [Full Source](../../tree/07.03-proxy-based-architecture) | [Diffs](../../compare/07.02-multiple-environments...07.03-proxy-based-architecture)
    * ESLint: [Full Source](../../tree/07.04-ESLint) | [Diffs](../../compare/07.03-proxy-based-architecture...07.04-ESLint)
