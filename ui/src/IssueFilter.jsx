@@ -19,7 +19,7 @@ class IssueFilter extends React.Component {
   render() {
     return (
       <div>
-        Show status:
+        Status:
         {' '}
         <select onChange={this.onChangeStatus}>
           <option value="">(All)</option>
