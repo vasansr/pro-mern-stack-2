@@ -67,4 +67,7 @@ This repository is incomplete.
    * Simple Routing: [Full Source](../../tree/09.01-simple-routing) | [Diffs](../../compare/08.06-debugging...09.01-simple-routing)
    * Route Parameters: [Full Source](../../tree/09.02-route-parameters) | [Diffs](../../compare/09.01-simple-routing...09.02-route-parameters)
    * Query Parameters: [Full Source](../../tree/09.03-query-parameters) | [Diffs](../../compare/09.02-route-parameters...09.03-query-parameters)
-   * : [Full Source](../../tree/master) | [Diffs](../../compare/09.03-query-parameters...master)
+   * Links: [Full source](../../tree/09.04-links) | [Diffs](../../compare/09.03-query-parameters...09.04-links)
+   * Programmatic Navigation: [Full source](../../tree/09.05-programmatic-navigation) | [Diffs](../../compare/09.04-links...09.05-programmatic-navigation)
+   * Nested Routes: [Full source](../../tree/09.06-nested-routes) | [Diffs](../../compare/09.05-programmatic-navigation...09.06-nested-routes)
+   * Browser History Router: [Full source](../../tree/09.07-browser-history-router) | [Diffs](../../compare/09.06-nested-routes...09.07-browser-history-router)
