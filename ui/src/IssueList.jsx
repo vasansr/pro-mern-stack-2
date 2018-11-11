@@ -30,7 +30,8 @@ export default class IssueList extends React.Component {
   async loadData() {
     const { location: { search } } = this.props;
     const params = new URLSearchParams(search);
-    const vars = { status: params.get('status') || undefined };
+    const vars = {};
+    if (params.get('status')) vars.status = params.get('status');
 
     const query = `query issueList($status: StatusType) {
       issueList (status: $status) {
