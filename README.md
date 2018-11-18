@@ -28,14 +28,14 @@ This repository is incomplete.
    * Stateless Components: [Full Source](../../tree/04.06-stateless-components) | [Diffs](../../compare/04.05-event-handling...04.06-stateless-components)
 
 ### Chapter 5: Express and GraphQL
-   * About API: [Full Source](../../tree/05.01-about-API) | [Diffs](../../compare/04.06-stateless-components...05.01-about-API)
-   * GraphQL Schema File: [Full Source](../../tree/05.02-graphql-schema-file) | [Diffs](../../compare/05.01-about-API...05.02-graphql-schema-file)
-   * List API: [Full Source](../../tree/05.03-list-API) | [Diffs](../../compare/05.02-graphql-schema-file...05.03-list-API)
-   * Integrate List API: [Full Source](../../tree/05.04-integrate-list-API) | [Diffs](../../compare/05.03-list-API...05.04-integrate-list-API)
-   * Custom Scalar Types: [Full Source](../../tree/05.05-custom-scalar-types) | [Diffs](../../compare/05.04-integrate-list-API...05.05-custom-scalar-types)
-   * Create API: [Full Source](../../tree/05.06-create-API) | [Diffs](../../compare/05.05-custom-scalar-types...05.06-create-API)
-   * Integrate Create API: [Full Source](../../tree/05.07-integrate-create-API) | [Diffs](../../compare/05.06-create-API...05.07-integrate-create-API)
-   * Query Variables: [Full Source](../../tree/05.08-query-variables) | [Diffs](../../compare/05.07-integrate-create-API...05.08-query-variables)
+   * About API: [Full Source](../../tree/05.01-about-api) | [Diffs](../../compare/04.06-stateless-components...05.01-about-api)
+   * GraphQL Schema File: [Full Source](../../tree/05.02-graphql-schema-file) | [Diffs](../../compare/05.01-about-api...05.02-graphql-schema-file)
+   * List API: [Full Source](../../tree/05.03-list-api) | [Diffs](../../compare/05.02-graphql-schema-file...05.03-list-api)
+   * Integrate List API: [Full Source](../../tree/05.04-integrate-list-api) | [Diffs](../../compare/05.03-list-api...05.04-integrate-list-api)
+   * Custom Scalar Types: [Full Source](../../tree/05.05-custom-scalar-types) | [Diffs](../../compare/05.04-integrate-list-api...05.05-custom-scalar-types)
+   * Create API: [Full Source](../../tree/05.06-create-api) | [Diffs](../../compare/05.05-custom-scalar-types...05.06-create-api)
+   * Integrate Create API: [Full Source](../../tree/05.07-integrate-create-api) | [Diffs](../../compare/05.06-create-api...05.07-integrate-create-api)
+   * Query Variables: [Full Source](../../tree/05.08-query-variables) | [Diffs](../../compare/05.07-integrate-create-api...05.08-query-variables)
    * Input Validations: [Full Source](../../tree/05.09-input-validations) | [Diffs](../../compare/05.08-query-variables...05.09-input-validations)
    * Displaying Errors: [Full Source](../../tree/05.10-displaying-errors) | [Diffs](../../compare/05.09-input-validations...05.10-displaying-errors)
 
