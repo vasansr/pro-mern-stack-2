@@ -8,10 +8,14 @@ class IssueFilter extends React.Component {
     const params = new URLSearchParams(search);
     this.state = {
       status: params.get('status') || '',
+      effortMin: params.get('effortMin') || '',
+      effortMax: params.get('effortMax') || '',
       changed: false,
     };
 
     this.onChangeStatus = this.onChangeStatus.bind(this);
+    this.onChangeEffortMin = this.onChangeEffortMin.bind(this);
+    this.onChangeEffortMax = this.onChangeEffortMax.bind(this);
     this.applyFilter = this.applyFilter.bind(this);
     this.showOriginalFilter = this.showOriginalFilter.bind(this);
   }
@@ -28,26 +32,46 @@ class IssueFilter extends React.Component {
     this.setState({ status: e.target.value, changed: true });
   }
 
+  onChangeEffortMin(e) {
+    const effortString = e.target.value;
+    if (effortString.match(/^\d*$/)) {
+      this.setState({ effortMin: e.target.value, changed: true });
+    }
+  }
+
+  onChangeEffortMax(e) {
+    const effortString = e.target.value;
+    if (effortString.match(/^\d*$/)) {
+      this.setState({ effortMax: e.target.value, changed: true });
+    }
+  }
+
   showOriginalFilter() {
     const { location: { search } } = this.props;
     const params = new URLSearchParams(search);
     this.setState({
       status: params.get('status') || '',
+      effortMin: params.get('effortMin') || '',
+      effortMax: params.get('effortMax') || '',
       changed: false,
     });
   }
 
   applyFilter() {
-    const { status } = this.state;
+    const { status, effortMin, effortMax } = this.state;
     const { history } = this.props;
-    history.push({
-      pathname: '/issues',
-      search: status ? `?status=${status}` : '',
-    });
+    const params = new URLSearchParams();
+    if (status) params.set('status', status);
+    if (effortMin) params.set('effortMin', effortMin);
+    if (effortMax) params.set('effortMax', effortMax);
+
+    const search = params.toString() ? `?${params.toString()}` : '';
+    history.push({ pathname: '/issues', search });
   }
 
   render() {
     const { status, changed } = this.state;
+    const { effortMin, effortMax } = this.state;
     return (
       <div>
         Status:
@@ -59,6 +83,20 @@ class IssueFilter extends React.Component {
           <option value="Fixed">Fixed</option>
           <option value="Closed">Closed</option>
         </select>
+        {' '}
+        Effort between:
+        {' '}
+        <input
+          size={5}
+          value={effortMin}
+          onChange={this.onChangeEffortMin}
+        />
+        {' - '}
+        <input
+          size={5}
+          value={effortMax}
+          onChange={this.onChangeEffortMax}
+        />
         {' '}
         <button type="button" onClick={this.applyFilter}>Apply</button>
         {' '}
