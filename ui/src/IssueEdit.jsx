@@ -47,10 +47,29 @@ export default class IssueEdit extends React.Component {
     });
   }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
-    const { issue } = this.state;
-    console.log(issue); // eslint-disable-line no-console
+    const { issue, invalidFields } = this.state;
+    if (Object.keys(invalidFields).length !== 0) return;
+
+    const query = `mutation issueUpdate(
+      $id: Int!
+      $changes: IssueUpdateInputs!
+    ) {
+      issueUpdate(
+        id: $id
+        changes: $changes
+      ) {
+        id title status owner
+        effort created due description
+      }
+    }`;
+
+    const { id, created, ...changes } = issue;
+    const data = await graphQLFetch(query, { changes, id });
+    this.setState({ issue: data ? data.issueUpdate : {} });
+    // eslint-disable-next-line no-alert
+    if (data) alert('Updated issue successfully');
   }
 
   async loadData() {
