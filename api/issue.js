@@ -23,8 +23,7 @@ async function list(_, { status, effortMin, effortMax }) {
   return issues;
 }
 
-async function add(_, { issue }) {
-  const db = getDb();
+function validate(issue) {
   const errors = [];
   if (issue.title.length < 3) {
     errors.push('Field "title" must be at least 3 characters long.');
@@ -35,6 +34,12 @@ async function add(_, { issue }) {
   if (errors.length > 0) {
     throw new UserInputError('Invalid input(s)', { errors });
   }
+}
+
+async function add(_, { issue }) {
+  const db = getDb();
+  validate(issue);
+
   const newIssue = Object.assign({}, issue);
   newIssue.created = new Date();
   newIssue.id = await getNextSequence('issues');
@@ -45,4 +50,21 @@ async function add(_, { issue }) {
   return savedIssue;
 }
 
-module.exports = { list, add, get };
+async function update(_, { id, changes }) {
+  const db = getDb();
+  if (changes.title || changes.status || changes.owner) {
+    const issue = await db.collection('issues').findOne({ id });
+    Object.assign(issue, changes);
+    validate(issue);
+  }
+  await db.collection('issues').updateOne({ id }, { $set: changes });
+  const savedIssue = await db.collection('issues').findOne({ id });
+  return savedIssue;
+}
+
+module.exports = {
+  list,
+  add,
+  get,
+  update,
+};
