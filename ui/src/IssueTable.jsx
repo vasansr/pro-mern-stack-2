@@ -5,6 +5,7 @@ const IssueRow = withRouter(({
   issue,
   location: { search },
   closeIssue,
+  deleteIssue,
   index,
 }) => {
   const selectLocation = { pathname: `/issues/${issue.id}`, search };
@@ -25,17 +26,22 @@ const IssueRow = withRouter(({
         <button type="button" onClick={() => { closeIssue(index); }}>
           Close
         </button>
+        {' | '}
+        <button type="button" onClick={() => { deleteIssue(index); }}>
+          Delete
+        </button>
       </td>
     </tr>
   );
 });
 
-export default function IssueTable({ issues, closeIssue }) {
+export default function IssueTable({ issues, closeIssue, deleteIssue }) {
   const issueRows = issues.map((issue, index) => (
     <IssueRow
       key={issue.id}
       issue={issue}
       closeIssue={closeIssue}
+      deleteIssue={deleteIssue}
       index={index}
     />
   ));
