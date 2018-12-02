@@ -67,9 +67,11 @@ export default class IssueEdit extends React.Component {
 
     const { id, created, ...changes } = issue;
     const data = await graphQLFetch(query, { changes, id });
-    this.setState({ issue: data ? data.issueUpdate : {} });
-    // eslint-disable-next-line no-alert
-    if (data) alert('Updated issue successfully');
+    if (data) {
+      this.setState({ issue: data.issueUpdate });
+      // eslint-disable-next-line no-alert
+      if (data) alert('Updated issue successfully');
+    }
   }
 
   async loadData() {
