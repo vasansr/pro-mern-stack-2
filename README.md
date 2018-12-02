@@ -71,3 +71,18 @@ This repository is incomplete.
    * Programmatic Navigation: [Full Source](../../tree/09.05-programmatic-navigation) | [Diffs](../../compare/09.04-links...09.05-programmatic-navigation#files_bucket)
    * Nested Routes: [Full Source](../../tree/09.06-nested-routes) | [Diffs](../../compare/09.05-programmatic-navigation...09.06-nested-routes#files_bucket)
    * Browser History Router: [Full Source](../../tree/09.07-browser-history-router) | [Diffs](../../compare/09.06-nested-routes...09.07-browser-history-router#files_bucket)
+
+### Chapter 10: Forms
+   * Controlled Components: [Full Source](../../tree/10.01-controlled-components) | [Diffs](../../compare/09.07-browser-history-router...10.01-controlled-components#files_bucket)
+   * Controlled Components in Forms: [Full Source](../../tree/10.02-controlled-components-in-forms) | [Diffs](../../compare/10.01-controlled-components...10.02-controlled-components-in-forms#files_bucket)
+   * More Filters: [Full Source](../../tree/10.03-more-filters) | [Diffs](../../compare/10.02-controlled-components-in-forms...10.03-more-filters#files_bucket)
+   * Typed Inputs: [Full Source](../../tree/10.04-typed-inputs) | [Diffs](../../compare/10.03-more-filters...10.04-typed-inputs#files_bucket)
+   * Edit Form: [Full Source](../../tree/10.05-edit-page) | [Diffs](../../compare/10.04-typed-inputs...10.05-edit-page#files_bucket)
+   * Number Input: [Full Source](../../tree/10.06-number-input) | [Diffs](../../compare/10.05-edit-page...10.06-number-input#files_bucket)
+   * Date Input: [Full Source](../../tree/10.07-date-input) | [Diffs](../../compare/10.06-number-input...10.07-date-input#files_bucket)
+   * Text Input: [Full Source](../../tree/10.08-text-input) | [Diffs](../../compare/10.07-date-input...10.08-text-input#files_bucket)
+   * Update API: [Full Source](../../tree/10.09-update-api) | [Diffs](../../compare/10.08-text-input...10.09-update-api#files_bucket)
+   * Updating an Issue: [Full Source](../../tree/10.10-updating-an-issue) | [Diffs](../../compare/10.09-update-api...10.10-updating-an-issue#files_bucket)
+   * Updating a Field: [Full Source](../../tree/10.11-updating-a-field) | [Diffs](../../compare/10.10-updating-an-issue...10.11-updating-a-field#files_bucket)
+   * Delete API: [Full Source](../../tree/10.12-delete-api) | [Diffs](../../compare/10.11-updating-a-field...10.12-delete-api#files_bucket)
+   * Deleting an Issue: [Full Source](../../tree/10.13-deleting-an-issue) | [Diffs](../../compare/10.12-delete-api...10.13-deleting-an-issue#files_bucket)
