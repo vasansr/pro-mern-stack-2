@@ -99,10 +99,15 @@ export default class IssueList extends React.Component {
       issueDelete(id: $id)
     }`;
     const { issues } = this.state;
-    const data = await graphQLFetch(query, { id: issues[index].id });
+    const { location: { pathname, search }, history } = this.props;
+    const { id } = issues[index];
+    const data = await graphQLFetch(query, { id });
     this.setState((prevState) => {
       if (data && data.issueDelete) {
         const newList = [...prevState.issues];
+        if (pathname === `/issues/${id}`) {
+          history.push({ pathname: '/issues', search });
+        }
         newList.splice(index, 1);
         return { issues: newList };
       }
