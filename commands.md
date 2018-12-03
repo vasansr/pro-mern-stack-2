@@ -166,3 +166,13 @@ npm install react-router-dom@4
 cd ui
 npm install url-search-params@1
 ```
+
+Chapter 11: React-Bootstrap
+
+### Installation
+```
+cd ui
+npm install react-bootstrap@0
+npm install bootstrap@3
+ln -s ../node_modules/bootstrap/dist public/bootstrap
+```
