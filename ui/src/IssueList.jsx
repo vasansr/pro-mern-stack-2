@@ -82,15 +82,15 @@ export default class IssueList extends React.Component {
     }`;
     const { issues } = this.state;
     const data = await graphQLFetch(query, { id: issues[index].id });
-    this.setState((prevState) => {
-      if (data) {
+    if (data) {
+      this.setState((prevState) => {
         const newList = [...prevState.issues];
         newList[index] = data.issueUpdate;
         return { issues: newList };
-      }
+      });
+    } else {
       this.loadData();
-      return prevState;
-    });
+    }
   }
 
   render() {
