@@ -86,3 +86,17 @@ This repository is incomplete.
    * Updating a Field: [Full Source](../../tree/10.11-updating-a-field) | [Diffs](../../compare/10.10-updating-an-issue...10.11-updating-a-field#files_bucket)
    * Delete API: [Full Source](../../tree/10.12-delete-api) | [Diffs](../../compare/10.11-updating-a-field...10.12-delete-api#files_bucket)
    * Deleting an Issue: [Full Source](../../tree/10.13-deleting-an-issue) | [Diffs](../../compare/10.12-delete-api...10.13-deleting-an-issue#files_bucket)
+
+### Chapter 11: React Bootstrap
+   * : [Full Source](../../tree/11.01-bootstrap-installation) | [Diffs](../../compare/10.13-deleting-an-issue...11.01-bootstrap-installation#files_bucket)
+   * : [Full Source](../../tree/11.03-buttons) | [Diffs](../../compare/11.01-bootstrap-installation...11.03-buttons#files_bucket)
+   * : [Full Source](../../tree/11.03-navigation-bar) | [Diffs](../../compare/11.03-buttons...11.03-navigation-bar#files_bucket)
+   * : [Full Source](../../tree/11.04-panels) | [Diffs](../../compare/11.03-navigation-bar...11.04-panels#files_bucket)
+   * : [Full Source](../../tree/11.05-tables) | [Diffs](../../compare/11.04-panels...11.05-tables#files_bucket)
+   * : [Full Source](../../tree/11.06-forms) | [Diffs](../../compare/11.05-tables...11.06-forms#files_bucket)
+   * : [Full Source](../../tree/11.07-grid-system) | [Diffs](../../compare/11.06-forms...11.07-grid-system#files_bucket)
+   * : [Full Source](../../tree/11.08-inline-forms) | [Diffs](../../compare/11.07-grid-system...11.08-inline-forms#files_bucket)
+   * : [Full Source](../../tree/11.09-horizontal-forms) | [Diffs](../../compare/11.08-inline-forms...11.09-horizontal-forms#files_bucket)
+   * : [Full Source](../../tree/11.10-validation-alerts) | [Diffs](../../compare/11.09-horizontal-forms...11.10-validation-alerts#files_bucket)
+   * : [Full Source](../../tree/11.11-toasts) | [Diffs](../../compare/11.10-validation-alerts...11.11-toasts#files_bucket)
+   * : [Full Source](../../tree/11.12-modals) | [Diffs](../../compare/11.11-toasts...11.12-modals#files_bucket)
