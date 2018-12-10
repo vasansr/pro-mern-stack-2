@@ -40,7 +40,7 @@ function NavBar() {
           title={<Glyphicon glyph="option-vertical" />}
           noCaret
         >
-          <MenuItem>Logout</MenuItem>
+          <MenuItem>About</MenuItem>
         </NavDropdown>
       </Nav>
     </Navbar>
