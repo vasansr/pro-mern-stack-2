@@ -17,9 +17,9 @@ function NavBar() {
 
 export default function Page() {
   return (
-    <React.Fragment>
+    <div>
       <NavBar />
       <Contents />
-    </React.Fragment>
+    </div>
   );
 }
