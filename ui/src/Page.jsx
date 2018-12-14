@@ -62,10 +62,10 @@ function Footer() {
 
 export default function Page() {
   return (
-    <React.Fragment>
+    <div>
       <NavBar />
       <Contents />
       <Footer />
-    </React.Fragment>
+    </div>
   );
 }
