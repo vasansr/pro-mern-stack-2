@@ -57,12 +57,12 @@ function Footer() {
 
 export default function Page() {
   return (
-    <React.Fragment>
+    <div>
       <NavBar />
       <Grid fluid>
         <Contents />
       </Grid>
       <Footer />
-    </React.Fragment>
+    </div>
   );
 }
