@@ -3,4 +3,4 @@ package-lock.json
 ui/public/*.js
 ui/public/*.map
 .env
-ui/server/About.js
+ui/dist

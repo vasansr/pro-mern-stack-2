@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "#start": "UI server. HMR is enabled in dev mode.",
-    "start": "nodemon -w server -w .env server/uiserver.js",
+    "start": "nodemon -w dist -w .env dist/server.js",
     "#lint": "Runs ESLint on all relevant files",
-    "lint": "eslint . --ext js,jsx --ignore-pattern public",
+    "lint": "eslint server src browser --ext js,jsx",
     "#compile": "Generates JS bundles for production. Use with start.",
     "compile": "webpack --mode production",
     "#watch": "Compile, and recompile on any changes.",
@@ -33,6 +33,7 @@
     "react-dom": "^16.6.0",
     "react-router-bootstrap": "^0.24.4",
     "react-router-dom": "^4.3.1",
+    "source-map-support": "^0.5.9",
     "url-search-params": "^1.1.0",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3",
@@ -50,6 +51,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "webpack": "^4.23.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
   }
 }

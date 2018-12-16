@@ -200,3 +200,14 @@ cp src/.babelrc browser
 cd ui
 npx babel src/About.jsx --out-dir server
 ```
+
+### Webpack for UI Server
+```
+cd ui
+rm src/.babelrc browser/.babelrc
+npm install --save-dev webpack-node-externals@1
+mkdir dist
+rm server/About.js
+mv server/render.js server/render.jsx
+npm install source-map-support@0
+```

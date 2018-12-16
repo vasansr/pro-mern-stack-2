@@ -1,4 +1,4 @@
-function template(body) {
+export default function template(body) {
   return `<!DOCTYPE HTML>
 <html>
 
@@ -23,5 +23,3 @@ function template(body) {
 </html>
 `;
 }
-
-module.exports = template;
