@@ -211,3 +211,10 @@ rm server/About.js
 mv server/render.js server/render.jsx
 npm install source-map-support@0
 ```
+
+### HMR for UI Server
+```
+cd ui
+npm install --save-dev webpack-merge@4
+npx webpack -w --config webpack.serverHMR.js
+```
