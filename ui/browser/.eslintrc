@@ -1,7 +1,6 @@
 {
   "env": {
-    "browser": true,
-    "node": true
+    "browser": true
   },
   rules: {
     "import/extensions": [ 'error', 'always', { ignorePackages: true } ],

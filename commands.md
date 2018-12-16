@@ -167,7 +167,7 @@ cd ui
 npm install url-search-params@1
 ```
 
-Chapter 11: React-Bootstrap
+## Chapter 11: React-Bootstrap
 
 ### Installation
 ```
@@ -181,4 +181,16 @@ ln -s ../node_modules/bootstrap/dist public/bootstrap
 ```
 cd ui
 npm install react-router-bootstrap@0
+```
+
+## Chapter 12: Server Rendering
+
+### Directory Structure
+```
+cd ui
+mkdir browser
+mkdir server
+mv src/App.jsx browser
+mv uiserver.js server
+cp src/.babelrc browser
 ```

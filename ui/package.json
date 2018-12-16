@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "#start": "UI server. HMR is enabled in dev mode.",
-    "start": "nodemon -w uiserver.js -w .env uiserver.js",
+    "start": "nodemon -w server -w .env server/uiserver.js",
     "#lint": "Runs ESLint on all relevant files",
     "lint": "eslint . --ext js,jsx --ignore-pattern public",
     "#compile": "Generates JS bundles for production. Use with start.",
