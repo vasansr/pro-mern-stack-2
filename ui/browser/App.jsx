@@ -13,7 +13,7 @@ const element = (
 );
 
 // Render the element in the contents div
-ReactDOM.render(element, document.getElementById('contents'));
+ReactDOM.hydrate(element, document.getElementById('contents'));
 
 if (module.hot) {
   module.hot.accept();
