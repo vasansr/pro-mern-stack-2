@@ -194,3 +194,9 @@ mv src/App.jsx browser
 mv uiserver.js server
 cp src/.babelrc browser
 ```
+
+### Basic Server Rendering
+```
+cd ui
+npx babel src/About.jsx --out-dir server
+```
