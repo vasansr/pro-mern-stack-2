@@ -218,3 +218,10 @@ cd ui
 npm install --save-dev webpack-merge@4
 npx webpack -w --config webpack.serverHMR.js
 ```
+
+### Data from APIs
+```
+cd ui
+npm uninstall whatwg-fetch
+npm install isomorphic-fetch@2
+```

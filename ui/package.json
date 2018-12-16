@@ -28,6 +28,7 @@
     "dotenv": "^6.1.0",
     "express": "^4.16.3",
     "http-proxy-middleware": "^0.19.0",
+    "isomorphic-fetch": "^2.2.1",
     "nodemon": "^1.18.4",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
@@ -38,8 +39,7 @@
     "source-map-support": "^0.5.9",
     "url-search-params": "^1.1.0",
     "webpack-dev-middleware": "^3.4.0",
-    "webpack-hot-middleware": "^2.24.3",
-    "whatwg-fetch": "^3.0.0"
+    "webpack-hot-middleware": "^2.24.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
