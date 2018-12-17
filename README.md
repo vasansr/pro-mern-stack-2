@@ -103,10 +103,16 @@ This repository is incomplete.
 
 ### Chapter 12: Server Rendering
    * New Directory Structure: [Full Source](../../tree/12.01-directory-structure) | [Diffs](../../compare/11.12-modals...12.01-directory-structure#files_bucket)
-   * Basic Serve Rendering: [Full Source](../../tree/12.02-basic-server-rendering) | [Diffs](../../compare/12.01-directory-structure...12.02-basic-server-rendering#files_bucket)
+   * Basic Server Rendering: [Full Source](../../tree/12.02-basic-server-rendering) | [Diffs](../../compare/12.01-directory-structure...12.02-basic-server-rendering#files_bucket)
    * Webpack for the Server: [Full Source](../../tree/12.03-webpack-for-server) | [Diffs](../../compare/12.02-basic-server-rendering...12.03-webpack-for-server#files_bucket)
    * HMR for the Server: [Full Source](../../tree/12.04-hmr-for-server) | [Diffs](../../compare/12.03-webpack-for-server...12.04-hmr-for-server#files_bucket)
    * Server Router: [Full Source](../../tree/12.05-server-router) | [Diffs](../../compare/12.04-hmr-for-server...12.05-server-router#files_bucket)
    * Hydrate: [Full Source](../../tree/12.06-hydrate) | [Diffs](../../compare/12.05-server-router...12.06-hydrate#files_bucket)
    * Data from APIs: [Full Source](../../tree/12.07-data-from-apis) | [Diffs](../../compare/12.06-hydrate...12.07-data-from-apis#files_bucket)
    * Syncing Initial Data: [Full Source](../../tree/12.08-syncing-initial-data) | [Diffs](../../compare/12.07-data-from-apis...12.08-syncing-initial-data#files_bucket)
+   * Common Data Fetcher: [Full Source](../../tree/12.09-common-data-fetcher) | [Diffs](../../compare/12.08-syncing-initial-data...12.09-common-data-fetcher#files_bucket)
+   * Generated Routes: [Full Source](../../tree/12.10-generated-routes) | [Diffs](../../compare/12.09-common-data-fetcher...12.10-generated-routes#files_bucket)
+   * Data Fetcher with Parameters: [Full Source](../../tree/12.11-data-fetcher-with-parameters) | [Diffs](../../compare/12.10-generated-routes...12.11-data-fetcher-with-parameters#files_bucket)
+   * Data Fetcher with Search: [Full Source](../../tree/12.12-data-fetcher-with-search) | [Diffs](../../compare/12.11-data-fetcher-with-parameters...12.12-data-fetcher-with-search#files_bucket)
+   * Nested Components: [Full Source](../../tree/12.13-nested-components) | [Diffs](../../compare/12.12-data-fetcher-with-search...12.13-nested-components#files_bucket)
+   * Redirects: [Full Source](../../tree/12.14-redirects) | [Diffs](../../compare/12.13-nested-components...12.14-redirects#files_bucket)
