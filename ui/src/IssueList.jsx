@@ -8,37 +8,10 @@ import IssueTable from './IssueTable.jsx';
 import IssueDetail from './IssueDetail.jsx';
 import graphQLFetch from './graphQLFetch.js';
 import Toast from './Toast.jsx';
+import store from './store.js';
 
 export default class IssueList extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      issues: [],
-      toastVisible: false,
-      toastMessage: '',
-      toastType: 'info',
-    };
-    this.closeIssue = this.closeIssue.bind(this);
-    this.deleteIssue = this.deleteIssue.bind(this);
-    this.showSuccess = this.showSuccess.bind(this);
-    this.showError = this.showError.bind(this);
-    this.dismissToast = this.dismissToast.bind(this);
-  }
-
-  componentDidMount() {
-    this.loadData();
-  }
-
-  componentDidUpdate(prevProps) {
-    const { location: { search: prevSearch } } = prevProps;
-    const { location: { search } } = this.props;
-    if (prevSearch !== search) {
-      this.loadData();
-    }
-  }
-
-  async loadData() {
-    const { location: { search } } = this.props;
+  static async fetchData(match, search, showError) {
     const params = new URLSearchParams(search);
     const vars = {};
     if (params.get('status')) vars.status = params.get('status');
@@ -63,7 +36,42 @@ export default class IssueList extends React.Component {
       }
     }`;
 
-    const data = await graphQLFetch(query, vars, this.showError);
+    const data = await graphQLFetch(query, vars, showError);
+    return data;
+  }
+
+  constructor() {
+    super();
+    const issues = store.initialData ? store.initialData.issueList : null;
+    this.state = {
+      issues,
+      toastVisible: false,
+      toastMessage: '',
+      toastType: 'info',
+    };
+    this.closeIssue = this.closeIssue.bind(this);
+    this.deleteIssue = this.deleteIssue.bind(this);
+    this.showSuccess = this.showSuccess.bind(this);
+    this.showError = this.showError.bind(this);
+    this.dismissToast = this.dismissToast.bind(this);
+  }
+
+  componentDidMount() {
+    const { issues } = this.state;
+    if (issues == null) this.loadData();
+  }
+
+  componentDidUpdate(prevProps) {
+    const { location: { search: prevSearch } } = prevProps;
+    const { location: { search } } = this.props;
+    if (prevSearch !== search) {
+      this.loadData();
+    }
+  }
+
+  async loadData() {
+    const { location: { search } } = this.props;
+    const data = await IssueList.fetchData(null, search, this.showError);
     if (data) {
       this.setState({ issues: data.issueList });
     }
@@ -131,6 +139,8 @@ export default class IssueList extends React.Component {
 
   render() {
     const { issues } = this.state;
+    if (issues == null) return null;
+
     const { toastVisible, toastType, toastMessage } = this.state;
     const { match } = this.props;
     return (
