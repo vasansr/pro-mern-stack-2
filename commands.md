@@ -231,3 +231,9 @@ npm install isomorphic-fetch@2
 cd ui
 rm public/index.html
 ```
+
+### Data Fetcher Parameters
+```
+cd ui
+npm install serialize-javascript@1
+```
