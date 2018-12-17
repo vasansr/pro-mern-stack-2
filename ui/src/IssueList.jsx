@@ -1,6 +1,5 @@
 import React from 'react';
 import URLSearchParams from 'url-search-params';
-import { Route } from 'react-router-dom';
 import { Panel } from 'react-bootstrap';
 
 import IssueFilter from './IssueFilter.jsx';
@@ -13,7 +12,7 @@ import store from './store.js';
 export default class IssueList extends React.Component {
   static async fetchData(match, search, showError) {
     const params = new URLSearchParams(search);
-    const vars = {};
+    const vars = { hasSelection: false, selectedId: 0 };
     if (params.get('status')) vars.status = params.get('status');
 
     const effortMin = parseInt(params.get('effortMin'), 10);
@@ -21,10 +20,19 @@ export default class IssueList extends React.Component {
     const effortMax = parseInt(params.get('effortMax'), 10);
     if (!Number.isNaN(effortMax)) vars.effortMax = effortMax;
 
+    const { params: { id } } = match;
+    const idInt = parseInt(id, 10);
+    if (!Number.isNaN(idInt)) {
+      vars.hasSelection = true;
+      vars.selectedId = idInt;
+    }
+
     const query = `query issueList(
       $status: StatusType
       $effortMin: Int
       $effortMax: Int
+      $hasSelection: Boolean!
+      $selectedId: Int!
     ) {
       issueList(
         status: $status
@@ -33,6 +41,9 @@ export default class IssueList extends React.Component {
       ) {
         id title status owner
         created effort due
+      }
+      issue(id: $selectedId) @include (if : $hasSelection) {
+        id description
       }
     }`;
 
@@ -43,8 +54,12 @@ export default class IssueList extends React.Component {
   constructor() {
     super();
     const issues = store.initialData ? store.initialData.issueList : null;
+    const selectedIssue = store.initialData
+      ? store.initialData.issue
+      : null;
     this.state = {
       issues,
+      selectedIssue,
       toastVisible: false,
       toastMessage: '',
       toastType: 'info',
@@ -62,18 +77,21 @@ export default class IssueList extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { location: { search: prevSearch } } = prevProps;
-    const { location: { search } } = this.props;
-    if (prevSearch !== search) {
+    const {
+      location: { search: prevSearch },
+      match: { params: { id: prevId } },
+    } = prevProps;
+    const { location: { search }, match: { params: { id } } } = this.props;
+    if (prevSearch !== search || prevId !== id) {
       this.loadData();
     }
   }
 
   async loadData() {
-    const { location: { search } } = this.props;
-    const data = await IssueList.fetchData(null, search, this.showError);
+    const { location: { search }, match } = this.props;
+    const data = await IssueList.fetchData(match, search, this.showError);
     if (data) {
-      this.setState({ issues: data.issueList });
+      this.setState({ issues: data.issueList, selectedIssue: data.issue });
     }
   }
 
@@ -142,7 +160,7 @@ export default class IssueList extends React.Component {
     if (issues == null) return null;
 
     const { toastVisible, toastType, toastMessage } = this.state;
-    const { match } = this.props;
+    const { selectedIssue } = this.state;
     return (
       <React.Fragment>
         <Panel>
@@ -158,7 +176,7 @@ export default class IssueList extends React.Component {
           closeIssue={this.closeIssue}
           deleteIssue={this.deleteIssue}
         />
-        <Route path={`${match.path}/:id`} component={IssueDetail} />
+        <IssueDetail issue={selectedIssue} />
         <Toast
           showing={toastVisible}
           onDismiss={this.dismissToast}
