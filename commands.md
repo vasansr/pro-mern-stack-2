@@ -225,3 +225,9 @@ cd ui
 npm uninstall whatwg-fetch
 npm install isomorphic-fetch@2
 ```
+
+### Routing
+```
+cd ui
+rm public/index.html
+```
