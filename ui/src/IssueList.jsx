@@ -43,6 +43,7 @@ export default class IssueList extends React.Component {
   constructor() {
     super();
     const issues = store.initialData ? store.initialData.issueList : null;
+    delete store.initialData;
     this.state = {
       issues,
       toastVisible: false,
