@@ -54,10 +54,10 @@ export default class IssueList extends React.Component {
   constructor() {
     super();
     const issues = store.initialData ? store.initialData.issueList : null;
-    delete store.initialData;
     const selectedIssue = store.initialData
       ? store.initialData.issue
       : null;
+    delete store.initialData;
     this.state = {
       issues,
       selectedIssue,
