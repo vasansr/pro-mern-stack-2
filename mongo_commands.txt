@@ -1,3 +1,5 @@
+// Chapter 6: MongoDB
+
 show databases
 db
 show collections
@@ -85,4 +87,32 @@ db.employees.aggregate([
 
 db.employees.aggregate([
   { $group: { _id: '$organization', average_age: { $avg: '$age' } } }
+])
+
+// Chapter 13: Advanced Features
+
+db.issues.aggregate([ { $match: { status: 'New' } } ])
+
+db.issues.aggregate([
+  { $group: {
+    _id: '$owner',
+    total_effort: { $sum: '$effort' },
+    average_effort: {$avg: '$effort' },
+  } }
+])
+
+db.issues.aggregate([ { $group: { _id: null, count: { $sum: 1 } } }])
+
+db.issues.aggregate([
+  { $match: { status: 'New' } },
+  { $group: { _id: null, count: { $sum: 1 } } },
+])
+
+db.issues.count({ status: 'New' })
+
+db.issues.aggregate([
+  { $group: {
+    _id: { owner: '$owner',status: '$status' },
+    count: { $sum: 1 },
+  } }
 ])

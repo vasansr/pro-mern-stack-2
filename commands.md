@@ -237,3 +237,12 @@ rm public/index.html
 cd ui
 npm install serialize-javascript@1
 ```
+
+
+## Chapter 13: Advanced Features
+
+### MongoDB Aggregate
+```
+cd api
+mongo issuetracker scripts/generate_data.mongo.js
+```
