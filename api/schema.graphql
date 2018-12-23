@@ -27,6 +27,11 @@ type IssueCounts {
   Closed: Int
 }
 
+type IssueListWithPages {
+  issues: [Issue!]!
+  pages: Int
+}
+
 "Toned down Issue, used as inputs, without server generated values."
 input IssueInputs {
   title: String!
@@ -57,7 +62,8 @@ type Query {
     status: StatusType
     effortMin: Int
     effortMax: Int
-  ): [Issue!]!
+    page: Int = 1
+  ): IssueListWithPages
   issue(id: Int!): Issue!
   issueCounts(
     status: StatusType
