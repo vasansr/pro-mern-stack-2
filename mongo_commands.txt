@@ -116,3 +116,11 @@ db.issues.aggregate([
     count: { $sum: 1 },
   } }
 ])
+
+db.issues.aggregate([
+  { $match: { effort: { $gte: 4 } } },
+  { $group: {
+    _id: { owner: '$owner',status: '$status' },
+    count: { $sum: 1 },
+  } }
+])
