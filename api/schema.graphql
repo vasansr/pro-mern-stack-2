@@ -19,6 +19,14 @@ type Issue {
   description: String
 }
 
+type IssueCounts {
+  owner: String!
+  New: Int
+  Assigned: Int
+  Fixed: Int
+  Closed: Int
+}
+
 "Toned down Issue, used as inputs, without server generated values."
 input IssueInputs {
   title: String!
@@ -51,6 +59,11 @@ type Query {
     effortMax: Int
   ): [Issue!]!
   issue(id: Int!): Issue!
+  issueCounts(
+    status: StatusType
+    effortMin: Int
+    effortMax: Int
+  ): [IssueCounts!]!
 }
 
 type Mutation {
