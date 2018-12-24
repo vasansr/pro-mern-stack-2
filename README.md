@@ -116,3 +116,15 @@ This repository is incomplete.
    * Data Fetcher with Search: [Full Source](../../tree/12.12-data-fetcher-with-search) | [Diffs](../../compare/12.11-data-fetcher-with-parameters...12.12-data-fetcher-with-search#files_bucket)
    * Nested Components: [Full Source](../../tree/12.13-nested-components) | [Diffs](../../compare/12.12-data-fetcher-with-search...12.13-nested-components#files_bucket)
    * Redirects: [Full Source](../../tree/12.14-redirects) | [Diffs](../../compare/12.13-nested-components...12.14-redirects#files_bucket)
+
+### Chapter 13: Advanced Featurs
+   * Higher Order Component for Toast: [Full Source](../../tree/13.01-higher-order-component-for-toast) | [Diffs](../../compare/12.14-redirects...13.01-higher-order-component-for-toast#files_bucket)
+   * MongoDB Aggregate: [Full Source](../../tree/13.02-mongodb-aggregate) | [Diffs](../../compare/13.01-higher-order-component-for-toast...13.02-mongodb-aggregate#files_bucket)
+   * Issue Counts API: [Full Source](../../tree/13.03-issue-counts-api) | [Diffs](../../compare/13.02-mongodb-aggregate...13.03-issue-counts-api#files_bucket)
+   * Report Page: [Full Source](../../tree/13.04-report-page) | [Diffs](../../compare/13.03-issue-counts-api...13.04-report-page#files_bucket)
+   * List API with Pagination: [Full Source](../../tree/13.05-list-api-with-pagination) | [Diffs](../../compare/13.04-report-page...13.05-list-api-with-pagination#files_bucket)
+   * Pagination UI: [Full Source](../../tree/13.06-pagination-ui) | [Diffs](../../compare/13.05-list-api-with-pagination...13.06-pagination-ui#files_bucket)
+   * Undo Delete API: [Full Source](../../tree/13.07-undo-delete-api) | [Diffs](../../compare/13.06-pagination-ui...13.07-undo-delete-api#files_bucket)
+   * Undo Delete UI: [Full Source](../../tree/13.08-undo-delete-ui) | [Diffs](../../compare/13.07-undo-delete-api...13.08-undo-delete-ui#files_bucket)
+   * Text Index API: [Full Source](../../tree/13.09-text-index-api) | [Diffs](../../compare/13.08-undo-delete-ui...13.09-text-index-api#files_bucket)
+   * Search Bar: [Full Source](../../tree/13.10-search-bar) | [Diffs](../../compare/13.09-text-index-api...13.10-search-bar#files_bucket)
