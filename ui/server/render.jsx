@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter, matchPath } from 'react-router-dom';
+import { renderStylesToString } from 'emotion-server';
 
 import Page from '../src/Page.jsx';
 import template from './template.js';
@@ -27,7 +28,7 @@ async function render(req, res) {
       <Page />
     </StaticRouter>
   );
-  const body = ReactDOMServer.renderToString(element);
+  const body = renderStylesToString(ReactDOMServer.renderToString(element));
 
   if (context.url) {
     res.redirect(301, context.url);
