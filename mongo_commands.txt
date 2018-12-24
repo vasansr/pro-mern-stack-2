@@ -124,3 +124,16 @@ db.issues.aggregate([
     count: { $sum: 1 },
   } }
 ])
+
+db.issues.createIndex({ title: "text" })
+
+db.issues.find({ $text: {$search: "click" } })
+
+db.issues.getIndexes()
+
+db.issues.dropIndex('title_text')
+db.issues.createIndex({ title: "text", description: "text" })
+
+db.issues.find({ $text: {$search: "click" } })
+
+db.issues.find({ $text: {$search: "clic" } })
