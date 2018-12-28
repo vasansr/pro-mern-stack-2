@@ -8,6 +8,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 import Contents from './Contents.jsx';
 import IssueAddNavItem from './IssueAddNavItem.jsx';
+import SignInNavItem from './SignInNavItem.jsx';
 import Search from './Search.jsx';
 
 function NavBar() {
@@ -34,6 +35,7 @@ function NavBar() {
       </Col>
       <Nav pullRight>
         <IssueAddNavItem />
+        <SignInNavItem />
         <NavDropdown
           id="user-dropdown"
           title={<Glyphicon glyph="option-vertical" />}
