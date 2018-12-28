@@ -262,3 +262,10 @@ cd api
 npm install body-parser@1
 npm install google-auth-library@2
 ```
+
+### JSON Web Token
+```
+cd api
+npm install jsonwebtoken@8
+npm install cookie-parser@1
+```
