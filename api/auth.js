@@ -61,7 +61,7 @@ routes.post('/signin', async (req, res) => {
 });
 
 routes.post('/user', (req, res) => {
-  res.send(getUser(req));
+  res.json(getUser(req));
 });
 
 module.exports = { routes };
