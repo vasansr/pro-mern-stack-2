@@ -253,3 +253,12 @@ cd ui
 npm install react-select@2
 npm install emotion@9 emotion-server@9
 ````
+
+## Chapter 14: Authentication and Deployment
+
+### Verify Google Token
+```
+cd api
+npm install body-parser@1
+npm install google-auth-library@2
+```
