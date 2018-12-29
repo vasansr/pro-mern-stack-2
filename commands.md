@@ -269,3 +269,9 @@ cd api
 npm install jsonwebtoken@8
 npm install cookie-parser@1
 ```
+
+### CORS
+```
+cd api
+npm install cors@2
+```
