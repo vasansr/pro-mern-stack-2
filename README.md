@@ -117,7 +117,7 @@ This repository is incomplete.
    * Nested Components: [Full Source](../../tree/12.13-nested-components) | [Diffs](../../compare/12.12-data-fetcher-with-search...12.13-nested-components#files_bucket)
    * Redirects: [Full Source](../../tree/12.14-redirects) | [Diffs](../../compare/12.13-nested-components...12.14-redirects#files_bucket)
 
-### Chapter 13: Advanced Featurs
+### Chapter 13: Advanced Features
    * Higher Order Component for Toast: [Full Source](../../tree/13.01-higher-order-component-for-toast) | [Diffs](../../compare/12.14-redirects...13.01-higher-order-component-for-toast#files_bucket)
    * MongoDB Aggregate: [Full Source](../../tree/13.02-mongodb-aggregate) | [Diffs](../../compare/13.01-higher-order-component-for-toast...13.02-mongodb-aggregate#files_bucket)
    * Issue Counts API: [Full Source](../../tree/13.03-issue-counts-api) | [Diffs](../../compare/13.02-mongodb-aggregate...13.03-issue-counts-api#files_bucket)
@@ -128,3 +128,15 @@ This repository is incomplete.
    * Undo Delete UI: [Full Source](../../tree/13.08-undo-delete-ui) | [Diffs](../../compare/13.07-undo-delete-api...13.08-undo-delete-ui#files_bucket)
    * Text Index API: [Full Source](../../tree/13.09-text-index-api) | [Diffs](../../compare/13.08-undo-delete-ui...13.09-text-index-api#files_bucket)
    * Search Bar: [Full Source](../../tree/13.10-search-bar) | [Diffs](../../compare/13.09-text-index-api...13.10-search-bar#files_bucket)
+
+### Chapter 14: Authentication
+   * Sign-In UI: [Full Source](../../tree/14-10-server-rendering-with-credentials) | [Diffs](../../compare/13.10-search-bar...14-10-server-rendering-with-credentials#files_bucket)
+   * Google Sign-In: [Full Source](../../tree/14.01-sign-in-ui) | [Diffs](../../compare/14-10-server-rendering-with-credentials...14.01-sign-in-ui#files_bucket)
+   * Verifying the Google Token: [Full Source](../../tree/14.02-google-sign-in) | [Diffs](../../compare/14.01-sign-in-ui...14.02-google-sign-in#files_bucket)
+   * JSON Web Tokens: [Full Source](../../tree/14.03-verifying-google-token) | [Diffs](../../compare/14.02-google-sign-in...14.03-verifying-google-token#files_bucket)
+   * Signing Out: [Full Source](../../tree/14.04-json-web-tokens) | [Diffs](../../compare/14.03-verifying-google-token...14.04-json-web-tokens#files_bucket)
+   * Authorization: [Full Source](../../tree/14.05-authorization) | [Diffs](../../compare/14.04-json-web-tokens...14.05-authorization#files_bucket)
+   * Authorization-Aware UI: [Full Source](../../tree/14.05-signing-out) | [Diffs](../../compare/14.05-authorization...14.05-signing-out#files_bucket)
+   * React Context: [Full Source](../../tree/14.07-auth-aware-ui) | [Diffs](../../compare/14.05-signing-out...14.07-auth-aware-ui#files_bucket)
+   * CORS with Credentials: [Full Source](../../tree/14.08-react-context) | [Diffs](../../compare/14.07-auth-aware-ui...14.08-react-context#files_bucket)
+   * Server Rendering with Credentials: [Full Source](../../tree/14.09-cors-with-credentials) | [Diffs](../../compare/14.08-react-context...14.09-cors-with-credentials#files_bucket)
