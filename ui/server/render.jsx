@@ -21,7 +21,11 @@ async function render(req, res) {
     initialData = await activeRoute.component.fetchData(match, search);
   }
 
+  const userData = await Page.fetchData(req.headers.cookie);
+
   store.initialData = initialData;
+  store.userData = userData;
+
   const context = {};
   const element = (
     <StaticRouter location={req.url} context={context}>
@@ -33,7 +37,7 @@ async function render(req, res) {
   if (context.url) {
     res.redirect(301, context.url);
   } else {
-    res.send(template(body, initialData));
+    res.send(template(body, initialData, userData));
   }
 }
 
