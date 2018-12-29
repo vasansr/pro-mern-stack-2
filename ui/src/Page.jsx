@@ -10,6 +10,7 @@ import Contents from './Contents.jsx';
 import IssueAddNavItem from './IssueAddNavItem.jsx';
 import SignInNavItem from './SignInNavItem.jsx';
 import Search from './Search.jsx';
+import UserContext from './UserContext.js';
 
 function NavBar({ user, onUserChange }) {
   return (
@@ -94,7 +95,9 @@ export default class Page extends React.Component {
       <div>
         <NavBar user={user} onUserChange={this.onUserChange} />
         <Grid fluid>
-          <Contents />
+          <UserContext.Provider value={user}>
+            <Contents />
+          </UserContext.Provider>
         </Grid>
         <Footer />
       </div>
