@@ -46,7 +46,8 @@ function installHandler(app) {
   let cors;
   if (enableCors) {
     const origin = process.env.UI_SERVER_ORIGIN || 'http://localhost:8000';
-    cors = { origin, credentials: true };
+    const methods = 'POST';
+    cors = { origin, methods, credentials: true };
   } else {
     cors = 'false';
   }
