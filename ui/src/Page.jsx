@@ -99,8 +99,8 @@ export default class Page extends React.Component {
   }
 
   render() {
-    let { user } = this.state;
-    if (user == null) user = { signedIn: false };
+    const { user } = this.state;
+    if (user == null) return null;
 
     return (
       <div>
