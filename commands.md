@@ -251,5 +251,4 @@ mongo issuetracker scripts/generate_data.mongo.js
 ```
 cd ui
 npm install react-select@2
-npm install emotion@9 emotion-server@9
 ````
