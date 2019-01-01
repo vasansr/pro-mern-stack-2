@@ -32,3 +32,11 @@ mongo $DB_URL scripts/generate_data.mongo.js
 ```
 heroku login
 ```
+
+## API application
+```
+cd api
+heroku create tracker-api-$GITHUB_USER
+heroku config:set DB_URL=$DB_URL
+git push tracker-api-$GITHUB_USER master
+```
