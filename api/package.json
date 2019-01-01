@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Pro MERN Stack (2nd Edition) API",
   "main": "index.js",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "start": "nodemon -e js,graphql -w . -w .env server.js",
     "lint": "eslint .",

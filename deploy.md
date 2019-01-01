@@ -27,3 +27,8 @@ cd api
 mongo $DB_URL scripts/init.mongo.js
 mongo $DB_URL scripts/generate_data.mongo.js
 ```
+
+## Heroku
+```
+heroku login
+```
