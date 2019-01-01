@@ -60,7 +60,7 @@ routes.post('/signin', async (req, res) => {
   };
 
   const token = jwt.sign(credentials, JWT_SECRET);
-  res.cookie('jwt', token, { httpOnly: true });
+  res.cookie('jwt', token, { httpOnly: true, domain: process.env.COOKIE_DOMAIN });
 
   res.json(credentials);
 });
