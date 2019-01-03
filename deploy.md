@@ -37,6 +37,17 @@ heroku login
 ```
 cd api
 heroku create tracker-api-$GITHUB_USER
-heroku config:set DB_URL=$DB_URL
-git push tracker-api-$GITHUB_USER master
+heroku config:set DB_URL=$DB_URL JWT_SECRET=yourspecialsecret
+git push heroku master
+```
+
+## UI Application
+```
+cd ui
+heroku create tracker-ui-$GITHUB_USER
+heroku config:set \
+  UI_API_ENDPOINT=https://tracker-api-$GITHUB_USER.herokuapp.com/graphql \
+  UI_AUTH_ENDPOINT=https://tracker-api-$GITHUB_USER.herokuapp.com/auth \
+  GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID
+git push heroku master
 ```

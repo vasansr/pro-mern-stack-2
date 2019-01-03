@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Pro MERN Stack (2nd Edition) - UI",
   "main": "index.js",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "#start": "UI server. HMR is enabled in dev mode.",
     "start": "node dist/server.js",
