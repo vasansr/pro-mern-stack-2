@@ -33,8 +33,8 @@ app.use(express.static('public'));
 
 const apiProxyTarget = process.env.API_PROXY_TARGET;
 if (apiProxyTarget) {
-  app.use('/graphql', proxy({ target: apiProxyTarget }));
-  app.use('/auth', proxy({ target: apiProxyTarget }));
+  app.use('/graphql', proxy({ target: apiProxyTarget, changeOrigin: true }));
+  app.use('/auth', proxy({ target: apiProxyTarget, changeOrigin: true }));
 }
 
 if (!process.env.UI_API_ENDPOINT) {
