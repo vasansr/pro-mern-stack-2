@@ -11,7 +11,7 @@ export default async function graphQLFetch(query, vars, showError) {
   const variables = vars || {};
   const apiEndpoint = (__isBrowser__) // eslint-disable-line no-undef
     ? window.ENV.UI_API_ENDPOINT
-    : process.env.UI_API_ENDPOINT;
+    : process.env.UI_SERVER_API_ENDPOINT;
   try {
     const response = await fetch(apiEndpoint, {
       method: 'POST',
