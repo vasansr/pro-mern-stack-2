@@ -51,3 +51,12 @@ heroku config:set \
   GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID
 git push heroku master
 ```
+## Proxy Mode
+```
+cd ui
+heroku config:set \
+  UI_API_ENDPOINT=https://tracker-ui-$GITHUB_USER.herokuapp.com/graphql \
+  UI_AUTH_ENDPOINT=https://tracker-ui-$GITHUB_USER.herokuapp.com/auth \
+  UI_SERVER_API_ENDPOINT=https://tracker-api-$GITHUB_USER.herokuapp.com/graphql \
+  API_PROXY_TARGET=https://tracker-api-$GITHUB_USER.herokuapp.com
+```
