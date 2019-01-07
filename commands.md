@@ -294,3 +294,10 @@ git commit -m "First commit"
 git remote add origin git@github.com:$GITHUB_USER/tracker-ui.git
 git push -u origin master
 ```
+
+### MongoDB
+```
+cd api
+mongo $DB_URL scripts/init.mongo.js
+mongo $DB_URL scripts/generate_data.mongo.js
+```
