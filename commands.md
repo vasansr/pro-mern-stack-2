@@ -274,3 +274,49 @@ npm install cookie-parser@1
 cd api
 npm install cors@2
 ```
+
+## Deployment
+
+### Git Repositories
+
+```
+cd api
+git init
+git add .
+git commit -m "First commit"
+git remote add origin git@github.com:$GITHUB_USER/tracker-api.git
+git push -u origin master
+
+cd ui
+git init
+git add .
+git commit -m "First commit"
+git remote add origin git@github.com:$GITHUB_USER/tracker-ui.git
+git push -u origin master
+```
+
+### MongoDB
+```
+cd api
+mongo $DB_URL scripts/init.mongo.js
+mongo $DB_URL scripts/generate_data.mongo.js
+```
+
+### Heroku
+```
+heroku login
+```
+
+### API application
+```
+cd api
+git commit -m "Changes for Heroku"
+git push origin master
+heroku create tracker-api-$GITHUB_USER
+heroku config:set \
+  DB_URL=$DB_URL \
+  JWT_SECRET=yourspecialsecret \
+  COOKIE_DOMAIN=herokuapp.com
+git push heroku master
+heroku logs
+```
