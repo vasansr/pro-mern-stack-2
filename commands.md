@@ -320,3 +320,19 @@ heroku config:set \
 git push heroku master
 heroku logs
 ```
+
+### UI Application
+```
+cd ui
+git commit -m "Changes for Heroku"
+git push origin master
+heroku create tracker-ui-$GITHUB_USER
+heroku config:set \
+  UI_API_ENDPOINT=https://tracker-api-$GITHUB_USER.herokuapp.com/graphql \
+  UI_AUTH_ENDPOINT=https://tracker-api-$GITHUB_USER.herokuapp.com/auth \
+  GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID
+git push heroku master
+cd api
+heroku config:set \
+  UI_SERVER_ORIGIN=https://tracker-ui-$GITHUB_USER.herokuapp.com
+```
