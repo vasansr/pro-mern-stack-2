@@ -140,11 +140,11 @@ This repository is incomplete.
    * React Context: [Full Source](../../tree/14.08-react-context) | [Diffs](../../compare/14.07-auth-aware-ui...14.08-react-context#files_bucket)
    * CORS with Credentials: [Full Source](../../tree/14.09-cors-with-credentials) | [Diffs](../../compare/14.08-react-context...14.09-cors-with-credentials#files_bucket)
    * Server Rendering with Credentials: [Full Source](../../tree/14.10-server-rendering-with-credentials) | [Diffs](../../compare/14.09-cors-with-credentials...14.10-server-rendering-with-credentials#files_bucket)
-   * Git Repositories: [Full Source](../../tree/14.11-cookie-domain) | [Diffs](../../compare/14.10-server-rendering-with-credentials...14.11-cookie-domain#files_bucket)
+   * Cookie Domain: [Full Source](../../tree/14.11-cookie-domain) | [Diffs](../../compare/14.10-server-rendering-with-credentials...14.11-cookie-domain#files_bucket)
 
 ### Chapter 15: Deployment
-   * MongoDB: [Full Source](../../tree/15.01-git-repositories) | [Diffs](../../compare/14.11-cookie-domain...15.01-git-repositories#files_bucket)
-   * The API Application: [Full Source](../../tree/15.02-mongodb) | [Diffs](../../compare/15.01-git-repositories...15.02-mongodb#files_bucket)
-   * The UI Application: [Full Source](../../tree/15.03-api-application) | [Diffs](../../compare/15.02-mongodb...15.03-api-application#files_bucket)
-   * Proxy Mode: [Full Source](../../tree/15.04-ui-application) | [Diffs](../../compare/15.03-api-application...15.04-ui-application#files_bucket)
-   * : [Full Source](../../tree/15.05-proxy-mode) | [Diffs](../../compare/15.04-ui-application...15.05-proxy-mode#files_bucket)
+   * Git Repositories: [Full Source](../../tree/15.01-git-repositories) | [Diffs](../../compare/14.11-cookie-domain...15.01-git-repositories#files_bucket)
+   * MongoDB: [Full Source](../../tree/15.02-mongodb) | [Diffs](../../compare/15.01-git-repositories...15.02-mongodb#files_bucket)
+   * The API Application: [Full Source](../../tree/15.03-api-application) | [Diffs](../../compare/15.02-mongodb...15.03-api-application#files_bucket)
+   * The UI Application: [Full Source](../../tree/15.04-ui-application) | [Diffs](../../compare/15.03-api-application...15.04-ui-application#files_bucket)
+   * Proxy Mode: [Full Source](../../tree/15.05-proxy-mode) | [Diffs](../../compare/15.04-ui-application...15.05-proxy-mode#files_bucket)
