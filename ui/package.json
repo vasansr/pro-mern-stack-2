@@ -16,12 +16,12 @@
   "license": "ISC",
   "homepage": "https://github.com/vasansr/pro-mern-stack-2",
   "dependencies": {
-    "express": "^4.16.3",
-    "nodemon": "^1.18.4"
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0"
   }
