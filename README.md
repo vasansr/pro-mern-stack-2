@@ -1,8 +1,7 @@
-# Pro MERN Stack - 2nd Edition
+# Work In Progress
 
-You are browsing the source code at the end of one of the sections in the book.
+This repository is incomplete.
 
-<<<<<<< HEAD
 ### Chapter 2: Hello World
    * Server-less Hello World: [Full Source](../../tree/02.01-server-less-hello-world)
    * JSX: [Full Source](../../tree/02.02-jsx) | [Diffs](../../compare/02.01-server-less-hello-world...02.02-jsx#files_bucket)
@@ -135,9 +134,9 @@ You are browsing the source code at the end of one of the sections in the book.
    * Google Sign-In: [Full Source](../../tree/14.02-google-sign-in) | [Diffs](../../compare/14.01-sign-in-ui...14.02-google-sign-in#files_bucket)
    * Verifying the Google Token: [Full Source](../../tree/14.03-verifying-google-token) | [Diffs](../../compare/14.02-google-sign-in...14.03-verifying-google-token#files_bucket)
    * JSON Web Tokens: [Full Source](../../tree/14.04-json-web-tokens) | [Diffs](../../compare/14.03-verifying-google-token...14.04-json-web-tokens#files_bucket)
-   * Signing Out: [Full Source](../../tree/14.05-authorization) | [Diffs](../../compare/14.04-json-web-tokens...14.05-authorization#files_bucket)
-   * Authorization: [Full Source](../../tree/14.05-signing-out) | [Diffs](../../compare/14.05-authorization...14.05-signing-out#files_bucket)
-   * Authorization-Aware UI: [Full Source](../../tree/14.07-auth-aware-ui) | [Diffs](../../compare/14.05-signing-out...14.07-auth-aware-ui#files_bucket)
+   * Signing Out: [Full Source](../../tree/14.05-signing-out) | [Diffs](../../compare/14.04-json-web-tokens...14.05-signing-out#files_bucket)
+   * Authorization: [Full Source](../../tree/14.06-authorization) | [Diffs](../../compare/14.05-signing-out...14.06-authorization#files_bucket)
+   * Authorization-Aware UI: [Full Source](../../tree/14.07-auth-aware-ui) | [Diffs](../../compare/14.06-authorization...14.07-auth-aware-ui#files_bucket)
    * React Context: [Full Source](../../tree/14.08-react-context) | [Diffs](../../compare/14.07-auth-aware-ui...14.08-react-context#files_bucket)
    * CORS with Credentials: [Full Source](../../tree/14.09-cors-with-credentials) | [Diffs](../../compare/14.08-react-context...14.09-cors-with-credentials#files_bucket)
    * Server Rendering with Credentials: [Full Source](../../tree/14.10-server-rendering-with-credentials) | [Diffs](../../compare/14.09-cors-with-credentials...14.10-server-rendering-with-credentials#files_bucket)
@@ -146,11 +145,8 @@ You are browsing the source code at the end of one of the sections in the book.
 ### Chapter 15: Deployment
    * Git Repositories: [Full Source](../../tree/15.01-git-repositories) | [Diffs](../../compare/14.11-cookie-domain...15.01-git-repositories#files_bucket)
    * MongoDB: [Full Source](../../tree/15.02-mongodb) | [Diffs](../../compare/15.01-git-repositories...15.02-mongodb#files_bucket)
-   * The API Application: [Full Source](../../tree/15.03-api-application) | [Diffs](../../compare/15.02-mongodb...15.03-api-application#files_bucket)
-   * The UI Application: [Full Source](../../tree/15.04-ui-application) | [Diffs](../../compare/15.03-api-application...15.04-ui-application#files_bucket)
-   * Proxy Mode: [Full Source](../../tree/15.05-proxy-mode) | [Diffs](../../compare/15.04-ui-application...15.05-proxy-mode#files_bucket)
-=======
-The project's README which contains the list of all chapters, sections
-their sources and other useful information can be found in the
-[master branch](https://github.com/vasansr/pro-mern-stack-2).
->>>>>>> 15.06-proxy-mode
+   * Heroku: [Full Source](../../tree/15.03-heroku) | [Diffs](../../compare/15.02-mongodb...15.03-heroku#files_bucket)
+   * The API Application: [Full Source](../../tree/15.04-api-application) | [Diffs](../../compare/15.03-heroku...15.04-api-application#files_bucket)
+   * The UI Application: [Full Source](../../tree/15.05-ui-application) | [Diffs](../../compare/15.04-api-application...15.05-ui-application#files_bucket)
+   * Proxy Mode: [Full Source](../../tree/15.06-proxy-mode) | [Diffs](../../compare/15.05-ui-application...15.06-proxy-mode#files_bucket)
+   * Non-Proxy Mode: [Full Source](../../tree/15.07-non-proxy-mode) | [Diffs](../../compare/15.06-proxy-mode...15.07-non-proxy-mode#files_bucket)
