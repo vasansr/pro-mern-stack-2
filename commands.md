@@ -306,3 +306,17 @@ mongo $DB_URL scripts/generate_data.mongo.js
 ```
 heroku login
 ```
+
+### API application
+```
+cd api
+git commit -m "Changes for Heroku"
+git push origin master
+heroku create tracker-api-$GITHUB_USER
+heroku config:set \
+  DB_URL=$DB_URL \
+  JWT_SECRET=yourspecialsecret \
+  COOKIE_DOMAIN=herokuapp.com
+git push heroku master
+heroku logs
+```
