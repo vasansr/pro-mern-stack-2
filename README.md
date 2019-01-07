@@ -1,7 +1,8 @@
-# Work In Progress
+# Pro MERN Stack - 2nd Edition
 
-This repository is incomplete.
+You are browsing the source code at the end of one of the sections in the book.
 
+<<<<<<< HEAD
 ### Chapter 2: Hello World
    * Server-less Hello World: [Full Source](../../tree/02.01-server-less-hello-world)
    * JSX: [Full Source](../../tree/02.02-jsx) | [Diffs](../../compare/02.01-server-less-hello-world...02.02-jsx#files_bucket)
@@ -148,3 +149,8 @@ This repository is incomplete.
    * The API Application: [Full Source](../../tree/15.03-api-application) | [Diffs](../../compare/15.02-mongodb...15.03-api-application#files_bucket)
    * The UI Application: [Full Source](../../tree/15.04-ui-application) | [Diffs](../../compare/15.03-api-application...15.04-ui-application#files_bucket)
    * Proxy Mode: [Full Source](../../tree/15.05-proxy-mode) | [Diffs](../../compare/15.04-ui-application...15.05-proxy-mode#files_bucket)
+=======
+The project's README which contains the list of all chapters, sections
+their sources and other useful information can be found in the
+[master branch](https://github.com/vasansr/pro-mern-stack-2).
+>>>>>>> 15.06-proxy-mode

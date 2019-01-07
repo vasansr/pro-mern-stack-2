@@ -277,7 +277,7 @@ npm install cors@2
 
 ## Deployment
 
-### API Repository
+### Git Repositories
 
 ```
 cd api
@@ -286,10 +286,7 @@ git add .
 git commit -m "First commit"
 git remote add origin git@github.com:$GITHUB_USER/tracker-api.git
 git push -u origin master
-```
 
-### UI Repository
-```
 cd ui
 git init
 git add .
@@ -349,6 +346,7 @@ heroku config:set \
   UI_SERVER_API_ENDPOINT=https://tracker-api-$GITHUB_USER.herokuapp.com/graphql \
   API_PROXY_TARGET=https://tracker-api-$GITHUB_USER.herokuapp.com
 ```
+<<<<<<< HEAD
 
 ### Non-Proxy Mode
 ```
@@ -368,3 +366,5 @@ heroku config:set \
   UI_SERVER_ORIGIN=http://ui.$CUSTOM_DOMAIN \
   COOKIE_DOMAIN=$CUSTOM_DOMAIN
 ```
+=======
+>>>>>>> 15.06-proxy-mode
