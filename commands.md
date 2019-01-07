@@ -336,3 +336,13 @@ cd api
 heroku config:set \
   UI_SERVER_ORIGIN=https://tracker-ui-$GITHUB_USER.herokuapp.com
 ```
+
+### Proxy Mode
+```
+cd ui
+heroku config:set \
+  UI_API_ENDPOINT=https://tracker-ui-$GITHUB_USER.herokuapp.com/graphql \
+  UI_AUTH_ENDPOINT=https://tracker-ui-$GITHUB_USER.herokuapp.com/auth \
+  UI_SERVER_API_ENDPOINT=https://tracker-api-$GITHUB_USER.herokuapp.com/graphql \
+  API_PROXY_TARGET=https://tracker-api-$GITHUB_USER.herokuapp.com
+```
