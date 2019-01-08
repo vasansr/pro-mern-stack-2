@@ -257,7 +257,7 @@ cd ui
 npm install react-select@2
 ````
 
-## Chapter 14: Authentication and Deployment
+## Chapter 14: Authentication
 
 ### Verify Google Token
 ```
