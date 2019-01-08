@@ -122,7 +122,7 @@ npx eslint . --ignore-pattern public
 npx eslint . --ext js,jsx --ignore-pattern public
 ```
 
-## Modularization and Webpack
+## Chapter 8: Modularization and Webpack
 
 ### Front-end Modules and Webpack
 ```
