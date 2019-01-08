@@ -279,7 +279,7 @@ cd api
 npm install cors@2
 ```
 
-## Deployment
+## Chapter 15: Deployment
 
 ### Git Repositories
 
