@@ -18,7 +18,6 @@ npm init
 npm install express
 npm uninstall express
 npm install express@4
-npm install nodemon@1
 ```
 
 ### Express
@@ -43,6 +42,11 @@ npx babel src --presets @babel/react --plugins=@babel/plugin-transform-arrow-fun
 npm uninstall @babel/plugin-transform-arrow-functions@7
 npm install --save-dev @babel/preset-env
 npx babel src --out-dir public
+```
+
+### Automate
+```
+npm install nodemon@1
 ```
 
 ## Chapter 5: Express GraphQL APIs
@@ -85,7 +89,7 @@ cd ..
 rm -rf node_modules
 ```
 
-### Environment
+### Mulitple Environments
 ```
 cd api
 npm install dotenv@6
@@ -100,7 +104,7 @@ cd ui
 npm install http-proxy-middleware@0
 ```
 
-### ESLint for Back-end
+### ESLint
 ```
 cd api
 npm install --save-dev eslint@5 eslint-plugin-import@2
