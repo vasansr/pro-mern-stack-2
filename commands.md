@@ -257,7 +257,7 @@ cd ui
 npm install react-select@2
 ````
 
-## Chapter 14: Authentication and Deployment
+## Chapter 14: Authentication
 
 ### Verify Google Token
 ```
@@ -279,7 +279,7 @@ cd api
 npm install cors@2
 ```
 
-## Deployment
+## Chapter 15: Deployment
 
 ### Git Repositories
 
