@@ -6,8 +6,8 @@
   "scripts": {
     "start": "nodemon -w uiserver.js -w .env uiserver.js",
     "lint": "eslint . --ext js,jsx --ignore-pattern public",
-    "compile": "webpack --mode production",
-    "watch": "webpack --watch"
+    "compile": "babel src --out-dir public",
+    "watch": "babel src --out-dir public --watch --verbose"
   },
   "repository": {
     "type": "git",
