@@ -15,7 +15,6 @@ const element = (
   </Router>
 );
 
-// Render the element in the contents div
 ReactDOM.hydrate(element, document.getElementById('contents'));
 
 if (module.hot) {
