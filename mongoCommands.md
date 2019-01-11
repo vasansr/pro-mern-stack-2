@@ -71,6 +71,14 @@ db.employees.updateOne({ id: 2 }, { $set: {age: 23 } })
 
 db.employees.updateMany({}, { $set: { organization: 'MyCompany' } })
 
+db.employees.replaceOne({ id: 4 }, {
+  id: 4,
+  name : { first : "Bobby" },
+  age : 66
+});
+
+db.employees.find({ id: 4 })
+
 db.employees.deleteOne({ id: 4 })
 db.employees.count()
 
