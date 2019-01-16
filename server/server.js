@@ -57,17 +57,21 @@ function issueList() {
   return issuesDB;
 }
 
-function issueAdd(_, { issue }) {
+function issueValidate(issue) {
   const errors = [];
   if (issue.title.length < 3) {
-    errors.push('Field "title" must be at least 3 characters long.')
+    errors.push('Field "title" must be at least 3 characters long.');
   }
-  if (issue.status == 'Assigned' && !issue.owner) {
+  if (issue.status === 'Assigned' && !issue.owner) {
     errors.push('Field "owner" is required when status is "Assigned"');
   }
   if (errors.length > 0) {
     throw new UserInputError('Invalid input(s)', { errors });
   }
+}
+
+function issueAdd(_, { issue }) {
+  issueValidate(issue);
   issue.created = new Date();
   issue.id = issuesDB.length + 1;
   issuesDB.push(issue);
