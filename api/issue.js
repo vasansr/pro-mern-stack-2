@@ -7,8 +7,7 @@ async function list() {
   return issues;
 }
 
-async function add(_, { issue }) {
-  const db = getDb();
+function validate(issue) {
   const errors = [];
   if (issue.title.length < 3) {
     errors.push('Field "title" must be at least 3 characters long.');
@@ -19,6 +18,12 @@ async function add(_, { issue }) {
   if (errors.length > 0) {
     throw new UserInputError('Invalid input(s)', { errors });
   }
+}
+
+async function add(_, { issue }) {
+  const db = getDb();
+  validate(issue);
+
   const newIssue = Object.assign({}, issue);
   newIssue.created = new Date();
   newIssue.id = await getNextSequence('issues');
