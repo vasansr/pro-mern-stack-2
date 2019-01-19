@@ -7,8 +7,8 @@ function jsonDateReviver(key, value) {
   return value;
 }
 
-export default async function graphQLFetch(query, vars, showError, cookie) {
-  const variables = vars || {};
+export default async function
+graphQLFetch(query, variables = {}, showError = null, cookie = null) {
   const apiEndpoint = (__isBrowser__) // eslint-disable-line no-undef
     ? window.ENV.UI_API_ENDPOINT
     : process.env.UI_SERVER_API_ENDPOINT;
