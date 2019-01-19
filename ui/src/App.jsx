@@ -93,8 +93,7 @@ IssueAdd.propTypes = {
   createIssue: PropTypes.func.isRequired,
 };
 
-async function graphQLFetch(query, vars) {
-  const variables = vars || {};
+async function graphQLFetch(query, variables = {}) {
   try {
     const response = await fetch(window.ENV.UI_API_ENDPOINT, {
       method: 'POST',
