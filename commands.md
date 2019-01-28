@@ -314,7 +314,7 @@ heroku login
 ### API application
 ```
 cd api
-git commit -m "Changes for Heroku"
+git commit -am "Changes for Heroku"
 git push origin master
 heroku create tracker-api-$GITHUB_USER
 heroku config:set \
