@@ -328,7 +328,7 @@ heroku logs
 ### UI Application
 ```
 cd ui
-git commit -m "Changes for Heroku"
+git commit -am "Changes for Heroku"
 git push origin master
 heroku create tracker-ui-$GITHUB_USER
 heroku config:set \
