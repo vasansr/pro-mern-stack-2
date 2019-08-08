@@ -1,6 +1,25 @@
-# Work In Progress
+![Pro MERN Stack, 2nd Edition](https://images.springer.com/sgw/books/medium/9781484243909.jpg)
 
-This repository is incomplete.
+This is the complete source code compilation of all code listings in the book
+Pro MERN Stack by Vasan Subramanian, published by Apress. The book can be purchased
+at any of these websites:
+
+   * [Apress](https://www.apress.com/book/9781484243909)
+   * [Springer](https://www.springer.com/book/9781484243909)
+   * [Amazon](https://www.amazon.com/Pro-MERN-Stack-Development-Express/dp/1484243900)
+
+Each section in the book ends with a working application, which corresponds to a branch in this
+repository. For each section, you can browse the complete source, or look at the differences from
+the previous section/step using the appropriate link against each section, in this page.
+
+### Reporting Issues
+
+There is no discussion forum for this book, so if you do find any problems running the code,
+or even in the text of the book, do create [New Issue](https://github.com/vasansr/pro-mern-stack-2/issues/new) in this github project. I or some other reader may help you resolve the issue.
+
+### Chapter 1: Introduction
+
+There are no code listings in this chapter.
 
 ### Chapter 2: Hello World
    * Server-less Hello World: [Full Source](../../tree/02.01-server-less-hello-world)
@@ -150,3 +169,7 @@ This repository is incomplete.
    * The UI Application: [Full Source](../../tree/15.05-ui-application) | [Diffs](../../compare/15.04-api-application...15.05-ui-application#files_bucket)
    * Proxy Mode: [Full Source](../../tree/15.06-proxy-mode) | [Diffs](../../compare/15.05-ui-application...15.06-proxy-mode#files_bucket)
    * Non-Proxy Mode: [Full Source](../../tree/15.07-non-proxy-mode) | [Diffs](../../compare/15.06-proxy-mode...15.07-non-proxy-mode#files_bucket)
+
+### Chapter 16: Looking Ahead
+
+There are no code listings in this chapter.
