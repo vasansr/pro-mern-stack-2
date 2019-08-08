@@ -1,12 +1,22 @@
 ![Pro MERN Stack, 2nd Edition](https://images.springer.com/sgw/books/medium/9781484243909.jpg)
 
 This is the complete source code compilation of all code listings in the book
-Pro MERN Stack by Vasan Subramanian, published by Apress. The book can be purchased
+Pro MERN Stack, (2nd Edition), published by Apress. The book can be purchased
 at any of these websites:
 
    * [Apress](https://www.apress.com/book/9781484243909)
    * [Springer](https://www.springer.com/book/9781484243909)
    * [Amazon](https://www.amazon.com/Pro-MERN-Stack-Development-Express/dp/1484243900)
+
+The 2nd Edition has the following new things as compared to the original, first edition:
+
+   * It uses the latest React (React 16)
+   * It uses the React Router (React Router 4)
+   * It uses GraphQL rather than REST based APIs
+   * It adopts an architecture that lets you run the API and UI on different servers
+   * It includes deployment instructions on Heroku
+   * It uses other latest technology such as JWT and CORS.
+   * ... and many more improvements over the first edition.
 
 Each section in the book ends with a working application, which corresponds to a branch in this
 repository. For each section, you can browse the complete source, or look at the differences from
