@@ -50,7 +50,7 @@ async function getNextSequence(name) {
   return result.value.current;
 }
 
-function issueValidate(_, { issue }) {
+function issueValidate(issue) {
   const errors = [];
   if (issue.title.length < 3) {
     errors.push('Field "title" must be at least 3 characters long.');
