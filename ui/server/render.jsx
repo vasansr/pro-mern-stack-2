@@ -18,7 +18,7 @@ async function render(req, res) {
     const index = req.url.indexOf('?');
     const search = index !== -1 ? req.url.substr(index) : null;
     initialData = await activeRoute.component
-      .fetchData(match, search, req.headers.cookie);
+      .fetchData(match, search, null, req.headers.cookie);
   }
 
   const userData = await Page.fetchData(req.headers.cookie);
