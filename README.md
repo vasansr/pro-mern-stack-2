@@ -1,4 +1,4 @@
-![Pro MERN Stack, 2nd Edition](https://images.springer.com/sgw/books/medium/9781484243909.jpg)
+![Pro MERN Stack, 2nd Edition](https://media.springernature.com/w306/springer-static/cover-hires/book/978-1-4842-4391-6)
 
 This is the complete source code compilation of all code listings in the book
 Pro MERN Stack, (2nd Edition), published by Apress. The book can be purchased
